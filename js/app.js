@@ -1,10 +1,12 @@
 
 var monthlyBudgetAmount = 0;
+var fullBudget = [];
 
 // Creates new budget object
 var budgetExpense = function(name, expense) {
   this.name = name;
   this.expense = expense;
+  fullBudget.push(this);
 };
 
 // Creates savings object

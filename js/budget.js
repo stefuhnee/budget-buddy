@@ -2,12 +2,11 @@ console.log('javascript is working');
 
 var form = document.getElementById('form');
 
-// Event handler -- assigns value to each object
+// Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
-
-  var enterIncome = parseInt(event.target.enterIncome.value);
-  console.log(enterIncome);
+  var monthlyIncome = parseInt(event.target.enterIncome.value);
+  console.log(monthlyIncome);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
   console.log(rentExpense);
   foodExpense.expense = parseInt(event.target.foodGroceries.value);
@@ -20,6 +19,10 @@ function collectBudgetData(event){
   console.log(loansExpense);
   transportationExpense.expense = parseInt(event.target.transportation.value);
   console.log(transportationExpense);
+
+  // Storing objects and monthly income in local storage
+  localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
+  localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
 }
 
 // event listener
