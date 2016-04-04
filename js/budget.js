@@ -1,10 +1,8 @@
 console.log('javascript is working');
-// var budgetExpense = function(name, expense) {
-//   this.name = name;
-//   this.expense = expense;
-// };
 
 var form = document.getElementById('form');
+
+// Event handler -- assigns value to each object
 function collectBudgetData(event){
   event.preventDefault();
 
@@ -24,12 +22,5 @@ function collectBudgetData(event){
   console.log(transportationExpense);
 }
 
-// Budget expense objects
-var rentExpense = new budgetExpense('rent', 0);
-var foodExpense = new budgetExpense('food', 0);
-var insuranceExpense = new budgetExpense('insurance', 0);
-var utilitiesExpense = new budgetExpense('utilities', 0);
-var loansExpense = new budgetExpense('loans', 0);
-var transportationExpense = new budgetExpense('transportation', 0);
-
+// event listener
 form.addEventListener('submit', collectBudgetData);
