@@ -1,4 +1,6 @@
 
+var monthlyBudgetAmount = 0;
+
 // Creates new budget object
 var budgetExpense = function(name, expense) {
   this.name = name;
@@ -11,3 +13,11 @@ var savingsObject = {
   goalAmount: 0,
   currentAmount: 0
 };
+
+// Budget expense objects
+var rentExpense = new budgetExpense('rent', 0);
+var foodExpense = new budgetExpense('food', 0);
+var insuranceExpense = new budgetExpense('insurance', 0);
+var utilitiesExpense = new budgetExpense('utilities', 0);
+var loansExpense = new budgetExpense('loans', 0);
+var transportationExpense = new budgetExpense('transportation', 0);
