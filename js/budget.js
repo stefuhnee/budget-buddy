@@ -1,3 +1,8 @@
+var budgetExpense = function(name, expense) {
+  this.name = name;
+  this.expense = expense;
+};
+
 function collectBudgetData(){
   event.preventDefault();
   var form = document.getElementById('form');
@@ -16,3 +21,5 @@ function collectBudgetData(){
   var transportation = parseInt(event.target.transportation.value);
   console.log(transportation);
 }
+
+form.addEventListener('submit', collectBudgetData);
