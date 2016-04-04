@@ -2,21 +2,23 @@
 <html>
   <head>
     <title>Budget Page</title>
+    <link href="normalize.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li>HOME</li>
-          <li>MY BUDGET</li>
-          <li>SAVINGS</li>
-          <li>ABOUT US</li>
-          <li>RESOURCES</li>
+          <a href= "index.html"><li class="home-tab">HOME</li></a>
+          <a href= "budget.html"><li class="budget-tab" id="current">MY BUDGET</li></a>
+          <a href= "savings.html"><li class="savings-tab">SAVINGS</li></a>
+          <a href= "about-us.html"><li class="aboutus-tab">ABOUT US</li></a>
+          <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
         </ul>
       </nav>
     </header>
-    <article>
+    <main>
       <form id="form">
         <fieldset>
           <legend>Budget</legend>
@@ -29,7 +31,7 @@
           <legend>Create your budget.</legend>
 
           <label name="rentMortgage">Rent/Mortagage</label>
-          <input type="text" name="rentMortgage" class="insert" id="rent">
+          <input type="text" name="rentMortagage" class="insert" id="rent">
 
           <label name="foodGroceries">Food/Groceries</label>
           <input type="text" name="foodGroceries" class="insert" id="food">
@@ -48,12 +50,11 @@
 
 
         </fieldset>
-          <button type="submit" id="submit">Pie Chart</button>
+          <button type="button" name="pieChart" id="submit">Pie Chart</button>
       </form>
 
 
-    </article>
-    <script src="js/budget.js"></script>
+    </main>
     <script src="js/app.js"></script>
 
   </body>
