@@ -1,0 +1,37 @@
+main {
+      width: 1000px;
+      height:  600px;
+      background-color: #FFEBAF;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+}
+
+li {
+    display: inline-block;
+
+}
+
+.home-tab {
+          background-color: #FFEBAF;
+}
+
+.budget-tab {
+          background-color: #FFEBAF;
+}
+
+.savings-tab {
+          background-color: #FFEBAF;
+}
+
+.aboutus-tab {
+          background-color: #FFEBAF;
+}
+
+.resources-tab {
+          background-color: #FFEBAF;
+}
