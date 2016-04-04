@@ -1,8 +1,8 @@
 console.log('javascript is working');
-var budgetExpense = function(name, expense) {
-  this.name = name;
-  this.expense = expense;
-};
+// var budgetExpense = function(name, expense) {
+//   this.name = name;
+//   this.expense = expense;
+// };
 
 var form = document.getElementById('form');
 function collectBudgetData(event){
