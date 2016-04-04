@@ -9,6 +9,9 @@ main {
       height:  600px;
       background-color: #FFEBAF;
 }
+a {
+  text-decoration: none;
+}
 
 ul {
   width: 1000px;
@@ -16,9 +19,10 @@ ul {
 
 li {
   font-family: 'PT Sans', sans-serif;
+    color: #FFF;
     display: table-cell;
     position: relative;
-    top: 17px;
+    top: 20px;
     right: 40px;
     border-top-left-radius: 30px;
     border-top-right-radius: 62px;
@@ -29,6 +33,14 @@ li {
     border-left: 20px solid #FFEBAF;
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
+}
+
+li:hover {
+        text-shadow:
+   2px 2px 0 #000,
+    2px 2px 0 #000,
+    2px 2px 0 #000,
+     2px 2px 0 #000;
 }
 
 .home-tab {
