@@ -8,17 +8,31 @@ main {
       width: 1000px;
       height:  600px;
       background-color: #FFEBAF;
+      z-index: 20;
 }
+
 a {
   text-decoration: none;
 }
 
 ul {
   width: 1000px;
+  display:flex;
+  justify-content: space-around;
+}
+
+div {
+  width: 1000px;
+  height:  600px;
+  background-color: #fbfbf8;
+  transform: rotate(-2deg) translate(15px) translateY(6px);
+  border: 1px solid #b8b8b5;
+  position: relative;
+  z-index: -1;
 }
 
 li {
-  font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', sans-serif;
     color: #FFF;
     display: table-cell;
     position: relative;
@@ -26,13 +40,14 @@ li {
     right: 40px;
     border-top-left-radius: 30px;
     border-top-right-radius: 62px;
-    width: 250px;
     height: 40px;
+    width: 160px;
     text-align: center;
     vertical-align: middle;
     border-left: 20px solid #FFEBAF;
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
+    z-index: -1000;
 }
 
 li:hover {
@@ -61,4 +76,10 @@ li:hover {
 
 .resources-tab {
           background-color: #004c7e;
+}
+
+#current {
+  background-color: #FFEBAF;
+  color: #000;
+  text-shadow: none;
 }
