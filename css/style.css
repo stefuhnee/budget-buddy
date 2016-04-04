@@ -1,0 +1,52 @@
+body {
+  width: 1000px;
+  margin: 0 auto;
+  margin-top: 150px;
+}
+
+main {
+      width: 1000px;
+      height:  600px;
+      background-color: #FFEBAF;
+}
+
+ul {
+  width: 1000px;
+}
+
+li {
+  font-family: 'PT Sans', sans-serif;
+    display: table-cell;
+    position: relative;
+    top: 17px;
+    right: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 62px;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 20px solid #FFEBAF;
+    border-right: 20px solid #FFEBAF;
+    border-top: 20px solid #FFEBAF;
+}
+
+.home-tab {
+          background-color: #5e0786;
+}
+
+.budget-tab {
+          background-color: #790046;
+}
+
+.savings-tab {
+          background-color: #f59331;
+}
+
+.aboutus-tab {
+          background-color: #007138;
+}
+
+.resources-tab {
+          background-color: #004c7e;
+}
