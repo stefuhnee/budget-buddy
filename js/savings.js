@@ -12,4 +12,4 @@ function collectSavingsData(event){
   console.log(addMoney);
 }
 
-savingsFormform.addEventListener('submit', collectSavingsData);
+savingsForm.addEventListener('submit', collectSavingsData);
