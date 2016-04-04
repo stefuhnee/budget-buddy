@@ -1,11 +1,13 @@
+console.log('javascript is working');
 var budgetExpense = function(name, expense) {
   this.name = name;
   this.expense = expense;
 };
 
-function collectBudgetData(){
+var form = document.getElementById('form');
+function collectBudgetData(event){
   event.preventDefault();
-  var form = document.getElementById('form');
+
   var enterIncome = parseInt(event.target.enterIncome.value);
   console.log(enterIncome);
   var rentMortgage = parseInt(event.target.rentMortgage.value);
