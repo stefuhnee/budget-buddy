@@ -15,9 +15,7 @@ a {
   text-decoration: none;
 }
 
-section{}
-
-ul {
+nav ul {
   width: 1000px;
   display:flex;
   justify-content: space-around;
@@ -33,7 +31,7 @@ div {
   z-index: -1;
 }
 
-li {
+nav li {
     font-family: 'PT Sans', sans-serif;
     color: #FFF;
     display: table-cell;
@@ -52,7 +50,7 @@ li {
     z-index: -1000;
 }
 
-li:hover {
+nav li:hover {
         text-shadow:
    2px 2px 0 #000,
     2px 2px 0 #000,
@@ -78,6 +76,21 @@ li:hover {
 
 .resources-tab {
           background-color: #004c7e;
+}
+
+.tools {
+  position: relative;
+  z-index: 50;
+}
+
+.fixlist {
+  display: block;
+  width: 1000px;
+}
+
+.fixlist li {
+  display: block;
+  width: 900px;
 }
 
 #current {
