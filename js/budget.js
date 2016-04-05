@@ -4,7 +4,10 @@ console.log('javascript is working');
 function collectBudgetData(event){
   event.preventDefault();
   if (canvasEl){
-    canvasEl.destroy();
+    var canvasSection = document.getElementById('canvasSection');
+    canvasSection.innerHTML = '';
+    var canvasEl = document.createElement('canvas');
+    canvasSection.appendChild(canvasEl);
   }
   var monthlyIncome = parseInt(event.target.enterIncome.value);
   console.log(monthlyIncome);
