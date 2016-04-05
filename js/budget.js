@@ -27,27 +27,39 @@ function collectBudgetData(event){
 
 // event listener
 form.addEventListener('submit', collectBudgetData);
+submit.addEventListener('submit', showChart);
 
 // pie chart info below
-var myPieChart = new Chart(ctx[0]).Pie(data,options);
+var myPieChart = new Chart(context).Pie(data);
 
-var data = [
+function showChart() {
+  var canvasPieChart = document.getElementById('canvas-pie-chart');
+  var pieChart = document.createElement ('canvas');
+  pieChart.setAttribute('id', 'pieChart');
+  pieChart.setAttribute('height', '500');
+  pieChart.setAttribute('width', '500');
+  canvasPieChart.appendChild(pieChart);
+  var canvasEl = document.getElementById('pieChart');
+  var context = canvasEl.getContext('2d');
+
+  var data = [
     {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
+      value: 300,
+      color: '#F7464A',
+      highlight: '#FF5A5E',
+      label: 'Red'
     },
     {
-        value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
+      value: 50,
+      color: '#46BFBD',
+      highlight: '#5AD3D1',
+      label: 'Green'
     },
     {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
+      value: 100,
+      color: '#FDB45C',
+      highlight: '#FFC870',
+      label: 'Yellow'
     }
-]
+  ];
+}
