@@ -2,6 +2,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   margin-top: 150px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 main {
@@ -53,7 +54,7 @@ nav li:hover {
      2px 2px 0 #000;
 }
 
-img {
+/*img {
   border: 1px solid black;
   height: 75px;
   opacity: 0.8;
@@ -61,7 +62,7 @@ img {
 }
 img:hover {
   opacity: 1;
-}
+}*/
 
 .home-tab {
           background-color: #5e0786;
@@ -102,4 +103,20 @@ img:hover {
   background-color: #FFEBAF;
   color: #000;
   text-shadow: none;
+}
+
+.cannoli img {
+  width: 230px;
+  display: block;
+}
+
+.cannoli {
+  padding-top: 90px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.cannoli article {
 }
