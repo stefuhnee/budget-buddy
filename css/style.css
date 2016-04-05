@@ -44,10 +44,11 @@ fieldset {
 label {
   font-family: 'PT Sans', sans-serif;
   display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+
 }
 
 input {
