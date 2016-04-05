@@ -3,7 +3,8 @@ console.log('javascript is working');
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
-  if (canvasEl){
+  if (myPieChart){
+
     var canvasSection = document.getElementById('canvasSection');
     canvasSection.innerHTML = '';
     var canvasEl = document.createElement('canvas');
