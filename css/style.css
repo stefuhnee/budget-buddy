@@ -2,6 +2,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   margin-top: 150px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 main {
@@ -102,16 +103,13 @@ nav li:hover {
     1px 1px 3px #000;
 }
 
-img {
+.fixlist img {
   border: 1px solid black;
   height: 75px;
   opacity: 0.8;
   margin: 30px 70px 10px 70px;
 }
 
-.fixlist {
-
-}
 .fixlist img:hover {
   opacity: 1;
 }
@@ -157,14 +155,28 @@ img {
   text-shadow: none;
 }
 
+.cannoli img {
+  width: 230px;
+  display: block;
+}
+
+.cannoli {
+  padding-top: 90px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0px auto;
+}
+
+.cannoli article {
+}
+
 #income {
   display: inline;
-
 }
 
 #expense{
   display: inline;
   margin-top: 25px;
   padding-top: 25px;
-
 }
