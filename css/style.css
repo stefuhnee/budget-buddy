@@ -7,7 +7,7 @@ body {
 
 main {
       width: 1000px;
-      height:  600px;
+      min-height: 600px;
       background-color: #FFEBAF;
       z-index: 20;
       padding: 20px;
@@ -32,40 +32,44 @@ legend{
   font-size: 24px;
   width: 900px;
   font-family: 'PT Sans', sans-serif;
-  border: 5px solid #9cd8f0;
+  border: 5px solid #49C975;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
 }
 
 fieldset {
-  border: 5px solid #9cd8f0;
+  border: 5px solid #49C975;
+  width: 900px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   margin-bottom: 20px;
+  
 
   }
 
 label {
   font-family: 'PT Sans', sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
   display: inline-block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
+  float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
+
+
 }
 
 input {
   display: inline-block;
   float: left;
-
-
+  margin-left: 80px;
+  border-radius: 5px;
 
 }
 
 button {
   border-radius: 10px;
-  background-color: #9cd8f0;
+  background-color: #49C975;
   margin-top: 25px;
   font-family: 'PT Sans', sans-serif;
 }
@@ -172,11 +176,7 @@ nav li:hover {
 }
 
 #income {
-  display: inline;
 }
 
 #expense{
-  display: inline;
-  margin-top: 25px;
-  padding-top: 25px;
 }
