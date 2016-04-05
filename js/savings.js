@@ -18,8 +18,10 @@ function collectSavingsData(event){
   console.log('How much to Save', howMuch);
   var addMoney = parseInt(event.target.addMoney.value);
   console.log('How much to add to Savings', addMoney);
+  // Grabs current savings from local storage and adds inputted value to it.
   currentSavings = JSON.parse(localStorage.getItem('Current Savings'));
   currentSavings += addMoney;
+  // Updates current savings in local storage
   localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
   console.log('Current amount of savings', currentSavings);
 
@@ -29,6 +31,10 @@ function collectSavingsData(event){
   localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
 }
 
 // Event listener
