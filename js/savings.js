@@ -2,6 +2,7 @@ var howMuch;
 var addMoney;
 var savingsArray = [];
 var savingsRemaining;
+var currentSavings = 0;
 
 console.log('javascript is working dummy');
 
@@ -12,14 +13,22 @@ function collectSavingsData(event){
   event.preventDefault();
 
   var savingsFor = event.target.savingsFor.value;
-  console.log(savingsFor);
+  console.log('Savings For: ', savingsFor);
   var howMuch = parseInt(event.target.howMuch.value);
-  console.log(howMuch);
+  console.log('How much to Save', howMuch);
   var addMoney = parseInt(event.target.addMoney.value);
-  console.log(addMoney);
-  var savingsRemaining = (howMuch - addMoney);
-  console.log(savingsRemaining);
-  return savingsRemaining;
+  console.log('How much to add to Savings', addMoney);
+  currentSavings = JSON.parse(localStorage.getItem('Current Savings'));
+  currentSavings += addMoney;
+  localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
+  console.log('Current amount of savings', currentSavings);
+
+  // Storing objects and monthly income in local storage
+  localStorage.setItem('Total Savings Goal', JSON.stringify(howMuch));
+  localStorage.setItem('Savings Remaining', JSON.stringify(savingsRemaining));
+  localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
+  var savingsRemaining = (howMuch - currentSavings);
+  console.log('Savings remaining: ', savingsRemaining);
 }
 
 // Event listener
