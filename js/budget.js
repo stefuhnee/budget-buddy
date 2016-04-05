@@ -3,6 +3,9 @@ console.log('javascript is working');
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
+  if (canvasEl){
+    canvasEl.destroy();
+  }
   var monthlyIncome = parseInt(event.target.enterIncome.value);
   console.log(monthlyIncome);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
@@ -23,10 +26,11 @@ function collectBudgetData(event){
   localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
 
   var canvasEl = document.getElementById('canvas-pie-chart');
+  canvasEl.setAttribute('class', 'canvas-pie-chart-class');
   var context = canvasEl.getContext('2d');
 
   function PieChartData(){
-    this.allPieData = [Rent, Food, Insurance, Utilities, Loans, Transportation,];
+    this.allPieData = [];
   }
 
   PieChartData.prototype.pushData = function(pieData){
@@ -34,7 +38,7 @@ function collectBudgetData(event){
   };
 
   PieChartData.prototype.renderToCanvas = function(context){
-    new Chart(context).PolarArea(this.allPieData);
+    new Chart(context).Pie(this.allPieData);
   };
 
   function PieData(label, value, color){
@@ -45,24 +49,42 @@ function collectBudgetData(event){
   }
 
   var data = [
-    lables = [],
+
     {
-      value: 300,
+      value: rentExpense.expense,
       color: '#F7464A',
       highlight: '#FF5A5E',
-      label: 'Red'
+      label: 'Rent'
     },
     {
-      value: 50,
+      value: foodExpense.expense,
       color: '#46BFBD',
       highlight: '#5AD3D1',
-      label: 'Green'
+      label: 'Food'
     },
     {
-      value: 100,
+      value: insuranceExpense.expense,
       color: '#FDB45C',
       highlight: '#FFC870',
-      label: 'Yellow'
+      label: 'Insurance'
+    },
+    {
+      value: utilitiesExpense.expense,
+      color: '#F7464A',
+      highlight: '#FF5A5E',
+      label: 'Utilities'
+    },
+    {
+      value: loansExpense.expense,
+      color: '#46BFBD',
+      highlight: '#5AD3D1',
+      label: 'Loans'
+    },
+    {
+      value: transportationExpense.expense,
+      color: '#FDB45C',
+      highlight: '#FFC870',
+      label: 'Transportation'
     }
   ];
 
