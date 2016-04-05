@@ -37,8 +37,9 @@ function collectSavingsData(event){
   console.log('Savings remaining: ', savingsRemaining);
 
   var youHaveSaved = document.createElement('article');
-  youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
   savingsData = document.getElementById('savingsData');
+  savingsData.textContent = '';
+  youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
   savingsData.appendChild(youHaveSaved);
 }
 
