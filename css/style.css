@@ -48,6 +48,15 @@ nav li:hover {
      2px 2px 0 #000;
 }
 
+img {
+  border: 1px solid black;
+  height: 75px;
+  opacity: 0.8;
+}
+img:hover {
+  opacity: 1;
+}
+
 .home-tab {
           background-color: #5e0786;
 }
@@ -79,7 +88,7 @@ nav li:hover {
 }
 
 .fixlist li {
-  display: block;
+  display: inline;
   width: 900px;
 }
 
