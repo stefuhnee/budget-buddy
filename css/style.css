@@ -31,22 +31,18 @@ legend{
   font-size: 24px;
   width: 900px;
   font-family: 'PT Sans', sans-serif;
-  border: 5px solid #9cd8f0;
+  border: 5px solid #49C975;
 
 }
 
 fieldset {
-  border: 5px solid #9cd8f0;
+  border: 5px solid #49C975;
   margin-bottom: 20px;
 
   }
 
 label {
   font-family: 'PT Sans', sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
   display: inline-block;
     float: left;
     clear: left;
@@ -64,7 +60,7 @@ input {
 
 button {
   border-radius: 10px;
-  background-color: #9cd8f0;
+  background-color: #49C975;
   margin-top: 25px;
   font-family: 'PT Sans', sans-serif;
 }
