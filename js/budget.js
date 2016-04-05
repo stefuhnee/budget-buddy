@@ -26,7 +26,7 @@ function collectBudgetData(event){
   var context = canvasEl.getContext('2d');
 
   function PieChartData(){
-    this.allPieData = [];
+    this.allPieData = [Rent, Food, Insurance, Utilities, Loans, Transportation,];
   }
 
   PieChartData.prototype.pushData = function(pieData){
@@ -45,6 +45,7 @@ function collectBudgetData(event){
   }
 
   var data = [
+    lables = [],
     {
       value: 300,
       color: '#F7464A',
