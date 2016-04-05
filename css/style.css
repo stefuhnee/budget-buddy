@@ -47,11 +47,16 @@ label {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-top: 10px;
-
+  display: inline-block;
+    float: left;
+    clear: left;
+    width: 250px;
+    text-align: right;
 }
 
 input {
-  width: 100px;
+  display: inline-block;
+  float: left;
 
 
 
@@ -105,7 +110,7 @@ img {
 }
 
 .fixlist {
-  
+
 }
 .fixlist img:hover {
   opacity: 1;
