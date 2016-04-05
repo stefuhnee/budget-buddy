@@ -4,6 +4,8 @@ var savingsArray = [];
 var savingsRemaining;
 var currentSavings = 0;
 var incomeRemaining;
+var monthlyIncome = JSON.parse(localStorage.getItem('Monthly Income'));
+var fullBudget = JSON.parse(localStorage.getItem('Budget Data'));
 
 console.log('javascript is working dummy');
 
@@ -45,7 +47,9 @@ savingsForm.addEventListener('submit', collectSavingsData);
 function monthlyIncomeRemaining() {
   incomeRemaining = monthlyIncome;
   for (var i = 0; i < fullBudget.length; i++) {
-    incomeRemaining - fullBudget[i].expense;
+    incomeRemaining -= fullBudget[i].expense;
   }
   return incomeRemaining;
 }
+
+console.log('monthly income remaining: ', monthlyIncomeRemaining());
