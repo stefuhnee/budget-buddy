@@ -7,7 +7,8 @@ body {
 
 main {
       width: 1000px;
-      height:  600px;
+      min-height: fit content;
+      /*height:  600px;*/
       background-color: #FFEBAF;
       z-index: 20;
       padding: 20px;
