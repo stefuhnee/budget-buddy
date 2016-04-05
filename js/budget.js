@@ -1,7 +1,5 @@
 console.log('javascript is working');
 
-var form = document.getElementById('form');
-
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
@@ -23,24 +21,28 @@ function collectBudgetData(event){
   // Storing objects and monthly income in local storage
   localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
   localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
-}
 
-// event listener
-form.addEventListener('submit', collectBudgetData);
-submit.addEventListener('submit', showChart);
-
-// pie chart info below
-var myPieChart = new Chart(context).Pie(data);
-
-function showChart() {
-  var canvasPieChart = document.getElementById('canvas-pie-chart');
-  var pieChart = document.createElement ('canvas');
-  pieChart.setAttribute('id', 'pieChart');
-  pieChart.setAttribute('height', '500');
-  pieChart.setAttribute('width', '500');
-  canvasPieChart.appendChild(pieChart);
-  var canvasEl = document.getElementById('pieChart');
+  var canvasEl = document.getElementById('canvas-pie-chart');
   var context = canvasEl.getContext('2d');
+
+  function PieChartData(){
+    this.allPieData = [];
+  }
+
+  PieChartData.prototype.pushData = function(pieData){
+    this.allPieData.push(pieData);
+  };
+
+  PieChartData.prototype.renderToCanvas = function(context){
+    new Chart(context).PolarArea(this.allPieData);
+  };
+
+  function PieData(label, value, color){
+    this.label = label;
+    this.value = value;
+    this.color = color;
+    this.highlight = '#fa7a7a';
+  }
 
   var data = [
     {
@@ -62,4 +64,9 @@ function showChart() {
       label: 'Yellow'
     }
   ];
+
+  var myPieChart = new Chart(context).Pie(data);
 }
+
+// event listener
+form.addEventListener('submit', collectBudgetData);
