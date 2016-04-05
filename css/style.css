@@ -103,7 +103,11 @@ img {
   opacity: 0.8;
   margin: 30px 70px 10px 70px;
 }
-img:hover {
+
+.fixlist {
+  
+}
+.fixlist img:hover {
   opacity: 1;
 }
 
