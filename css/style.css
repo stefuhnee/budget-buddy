@@ -9,6 +9,7 @@ main {
       height:  600px;
       background-color: #FFEBAF;
       z-index: 20;
+      padding: 20px;
 }
 
 h2 {
@@ -18,6 +19,49 @@ h2 {
 
 a {
   text-decoration: none;
+}
+
+form {
+  text-align: center;
+
+}
+
+legend{
+  margin-top: 75px;
+  font-size: 24px;
+  width: 900px;
+  font-family: 'PT Sans', sans-serif;
+  border: 5px solid #9cd8f0;
+
+}
+
+fieldset {
+  border: 5px solid #9cd8f0;
+  margin-bottom: 20px;
+
+  }
+
+label {
+  font-family: 'PT Sans', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+
+}
+
+input {
+  width: 100px;
+
+
+
+}
+
+button {
+  border-radius: 10px;
+  background-color: #9cd8f0;
+  margin-top: 25px;
+  font-family: 'PT Sans', sans-serif;
 }
 
 nav ul {
@@ -46,11 +90,11 @@ nav li {
 }
 
 nav li:hover {
-        text-shadow:
-   2px 2px 0 #000,
-    2px 2px 0 #000,
-    2px 2px 0 #000,
-     2px 2px 0 #000;
+     text-shadow:
+  1px 1px 3px #000,
+   1px 1px 3px #000,
+   1px 1px 3px #000,
+    1px 1px 3px #000;
 }
 
 img {
@@ -102,4 +146,16 @@ img:hover {
   background-color: #FFEBAF;
   color: #000;
   text-shadow: none;
+}
+
+#income {
+  display: inline;
+
+}
+
+#expense{
+  display: inline;
+  margin-top: 25px;
+  padding-top: 25px;
+
 }
