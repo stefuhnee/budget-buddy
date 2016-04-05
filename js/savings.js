@@ -4,9 +4,9 @@ var savingsArray = [];
 var savingsRemaining;
 var currentSavings = 0;
 var incomeRemaining;
+var savingsData;
 var monthlyIncome = JSON.parse(localStorage.getItem('Monthly Income'));
 var fullBudget = JSON.parse(localStorage.getItem('Budget Data'));
-var savingsData = document.getElementById('savingsData');
 
 console.log('javascript is working dummy');
 
@@ -35,15 +35,15 @@ function collectSavingsData(event){
   localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
+
+  var youHaveSaved = document.createElement('article');
+  youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
+
+  function giveResults(){
+    savingsData = document.getElementById('savingsData');
+    savingsData.appendChild(youHaveSaved);
+  }
 }
-
-//create tag to place savings info
-//var savingsFor = event.target.savingsFor.value;
-//var howMuch = event.target.howMuch.value;
-var youHaveSaved = document.createElement('article');
-youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
-
-var getHowMuch = document.createElement('article');
 
 // Event listener
 savingsForm.addEventListener('submit', collectSavingsData);
