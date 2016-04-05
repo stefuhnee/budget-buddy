@@ -11,6 +11,11 @@ main {
       z-index: 20;
 }
 
+h2 {
+  margin: 10px;
+  padding: 30px 0px 10px 0px;
+}
+
 a {
   text-decoration: none;
 }
@@ -52,6 +57,7 @@ img {
   border: 1px solid black;
   height: 75px;
   opacity: 0.8;
+  margin: 30px 70px 10px 70px;
 }
 img:hover {
   opacity: 1;
