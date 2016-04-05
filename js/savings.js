@@ -3,6 +3,7 @@ var addMoney;
 var savingsArray = [];
 var savingsRemaining;
 var currentSavings = 0;
+var incomeRemaining;
 
 console.log('javascript is working dummy');
 
@@ -39,3 +40,12 @@ function clearLocalStorage() {
 
 // Event listener
 savingsForm.addEventListener('submit', collectSavingsData);
+
+// Calculates remaining income for the month after submitting expenses
+function monthlyIncomeRemaining() {
+  incomeRemaining = monthlyIncome;
+  for (var i = 0; i < fullBudget.length; i++) {
+    incomeRemaining - fullBudget[i].expense;
+  }
+  return incomeRemaining;
+}
