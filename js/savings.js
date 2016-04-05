@@ -11,7 +11,7 @@ console.log('javascript is working dummy');
 
 var savingsForm = document.getElementById('savingsForm');
 
-// Collects user info from savings form (event hnalder)
+// Collects user info from savings form (event handler)
 function collectSavingsData(event){
   event.preventDefault();
 
@@ -36,20 +36,7 @@ function collectSavingsData(event){
   console.log('Savings remaining: ', savingsRemaining);
 }
 
-function clearLocalStorage() {
-  localStorage.clear();
-}
-
 // Event listener
 savingsForm.addEventListener('submit', collectSavingsData);
-
-// Calculates remaining income for the month after submitting expenses
-function monthlyIncomeRemaining() {
-  incomeRemaining = monthlyIncome;
-  for (var i = 0; i < fullBudget.length; i++) {
-    incomeRemaining -= fullBudget[i].expense;
-  }
-  return incomeRemaining;
-}
 
 console.log('monthly income remaining: ', monthlyIncomeRemaining());
