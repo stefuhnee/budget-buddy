@@ -3,6 +3,24 @@ console.log('javascript is working');
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
+  if (document.getElementsByClassName('canvas-pie-chart')[0]){
+    console.log('benton says');
+    var canvasSection = document.getElementById('canvas-section');
+    console.log('remove child thing: ', document.getElementsByTagName('canvas')[0]);
+    canvasSection.removeChild(document.getElementsByTagName('canvas')[0]);
+    var canvasEl = document.createElement('canvas');
+    canvasSection.appendChild(canvasEl);
+  } else {
+    var canvasEl = document.createElement('canvas');
+    var canvasSection = document.getElementById('canvas-section');
+    canvasSection.appendChild(canvasEl);
+  }
+
+  canvasEl.setAttribute('class', 'canvas-pie-chart');
+  canvasEl.setAttribute('width', '400px');
+  canvasEl.setAttribute('height', '400px');
+  var context = canvasEl.getContext('2d');
+
   var monthlyIncome = parseInt(event.target.enterIncome.value);
   console.log(monthlyIncome);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
@@ -22,9 +40,6 @@ function collectBudgetData(event){
   localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
   localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
 
-  var canvasEl = document.getElementById('canvas-pie-chart');
-  var context = canvasEl.getContext('2d');
-
   function PieChartData(){
     this.allPieData = [];
   }
@@ -34,7 +49,7 @@ function collectBudgetData(event){
   };
 
   PieChartData.prototype.renderToCanvas = function(context){
-    new Chart(context).PolarArea(this.allPieData);
+    new Chart(context).Pie(this.allPieData);
   };
 
   function PieData(label, value, color){
@@ -45,28 +60,57 @@ function collectBudgetData(event){
   }
 
   var data = [
+
     {
-      value: 300,
+      value: rentExpense.expense,
       color: '#F7464A',
       highlight: '#FF5A5E',
-      label: 'Red'
+      label: 'Rent'
     },
     {
-      value: 50,
+      value: foodExpense.expense,
       color: '#46BFBD',
       highlight: '#5AD3D1',
-      label: 'Green'
+      label: 'Food'
     },
     {
-      value: 100,
+      value: insuranceExpense.expense,
       color: '#FDB45C',
       highlight: '#FFC870',
-      label: 'Yellow'
+      label: 'Insurance'
+    },
+    {
+      value: utilitiesExpense.expense,
+      color: '#F7464A',
+      highlight: '#FF5A5E',
+      label: 'Utilities'
+    },
+    {
+      value: loansExpense.expense,
+      color: '#46BFBD',
+      highlight: '#5AD3D1',
+      label: 'Loans'
+    },
+    {
+      value: transportationExpense.expense,
+      color: '#FDB45C',
+      highlight: '#FFC870',
+      label: 'Transportation'
     }
   ];
 
   var myPieChart = new Chart(context).Pie(data);
 }
+
+// Calculates remaining income for the month after submitting expenses
+function monthlyIncomeRemaining() {
+  incomeRemaining = monthlyIncome;
+  for (var i = 0; i < fullBudget.length; i++) {
+    incomeRemaining -= fullBudget[i].expense;
+  }
+  return incomeRemaining;
+}
+
 
 // event listener
 form.addEventListener('submit', collectBudgetData);

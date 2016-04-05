@@ -9,6 +9,10 @@ var budgetExpense = function(name, expense) {
   fullBudget.push(this);
 };
 
+function clearLocalStorage() {
+  localStorage.clear();
+}
+
 // Creates savings object
 var savingsObject = {
   goalName: '',
