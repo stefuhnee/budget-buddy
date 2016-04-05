@@ -21,16 +21,6 @@ nav ul {
   justify-content: space-around;
 }
 
-div {
-  width: 1000px;
-  height:  600px;
-  background-color: #fbfbf8;
-  transform: rotate(-2deg) translate(15px) translateY(6px);
-  border: 1px solid #b8b8b5;
-  position: relative;
-  z-index: -1;
-}
-
 nav li {
     font-family: 'PT Sans', sans-serif;
     color: #FFF;
