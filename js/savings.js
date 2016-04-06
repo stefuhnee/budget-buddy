@@ -37,11 +37,15 @@ function collectSavingsData(event){
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
 
+  //button to display savings data
   var youHaveSaved = document.createElement('article');
   savingsData = document.getElementById('savingsData');
   savingsData.textContent = '';
   youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
   savingsData.appendChild(youHaveSaved);
+
+  //button to start a new goal, clear savings from local storage
+  var clearLocalStorage = document.createElement('article');
 
 // Progress bar
   if (currentSavings <= howMuch) {
