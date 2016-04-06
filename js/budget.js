@@ -118,9 +118,9 @@ function collectBudgetData(event){
       label: 'Remaining Income'
     }
   ];
-  myPieChart.generateLegend();
   var myPieChart = new Chart(context).Pie(data);
-
+  document.getElementById('chart-legend-location').innerHTML = myPieChart.generateLegend();
+  console.log(myPieChart.generateLegend());
   monthlyIncomeRemaining();
 }
 
