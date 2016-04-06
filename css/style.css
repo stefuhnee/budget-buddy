@@ -233,6 +233,24 @@ nav li:hover {
   z-index: 2000;
 }
 
+.pie-legend span {
+  text-align: center;
+  height: 20px;
+  width: 200px;
+  display: inline-block;
+  border: 1px solid black;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow:
+1px 1px 3px #000,
+1px 1px 3px #000,
+1px 1px 3px #000,
+ 1px 1px 3px #000;
+
+
+
+}
+
 #progress-holder {
   width:400px;
   height:20px;
