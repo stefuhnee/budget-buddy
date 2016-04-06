@@ -33,8 +33,11 @@ header {
 }
 
 h2 {
-  margin: 10px;
+  margin: auto;
   padding: 30px 0px 10px 0px;
+  font-weight: normal;
+  display: inline-block;
+  font-size: 36px;
 }
 
 a {
@@ -183,6 +186,7 @@ nav li:hover {
 .tools {
   position: relative;
   z-index: 50;
+  text-align: center;
 }
 
 .fixlist {
