@@ -1,4 +1,6 @@
 var incomeRemaining;
+var monthlyIncome;
+var context;
 console.log('javascript is working');
 
 // Event handler -- assigns value to each object according to user input
@@ -22,22 +24,16 @@ function collectBudgetData(event){
   canvasEl.setAttribute('class', 'canvas-pie-chart');
   canvasEl.setAttribute('width', '400px');
   canvasEl.setAttribute('height', '400px');
-  var context = canvasEl.getContext('2d');
+  context = canvasEl.getContext('2d');
 
-  var monthlyIncome = parseInt(event.target.enterIncome.value);
-  console.log(monthlyIncome);
+  // Takes input and updates expense property of objects. Checks if input is NaN and changes it to 0 if not.
+  monthlyIncome = parseInt(event.target.enterIncome.value);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
-  console.log(rentExpense);
   foodExpense.expense = parseInt(event.target.foodGroceries.value);
-  console.log(foodExpense);
   insuranceExpense.expense = parseInt(event.target.insurance.value);
-  console.log(insuranceExpense);
   utilitiesExpense.expense = parseInt(event.target.utilities.value);
-  console.log(utilitiesExpense);
   loansExpense.expense = parseInt(event.target.loansCcDebt.value);
-  console.log(loansExpense);
   transportationExpense.expense = parseInt(event.target.transportation.value);
-  console.log(transportationExpense);
 
   // Calculates remaining income for the month after submitting expenses
   function monthlyIncomeRemaining() {
@@ -47,6 +43,13 @@ function collectBudgetData(event){
     }
     console.log('Monthly income remaining ' + incomeRemaining);
     return incomeRemaining;
+  }
+
+// Changes NaN (blank input) values to 0
+  function makeInputValid(target) {
+    if (typeof target !== 'number') {
+      target = 0;
+    }
   }
 
   // Storing objects and monthly income in local storage

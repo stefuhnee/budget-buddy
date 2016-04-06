@@ -36,19 +36,20 @@
           <input type="text" name="savingsFor" class="insert" id="saving">
 
           <label name="howMuch">How much do you need to save?</label>
-          <input type="text" name="howMuch" class="insert" id="need">
+          <input type="number" name="howMuch" class="insert" id="need" required placeholder="Enter a number">
 
           <label name="addMoney">Add More Money?</label>
-          <input type="text" name="addMoney" class="insert" id="addMoney">
+          <input type="number" name="addMoney" class="insert" id="addMoney" required placeholder="Enter a number">
 
         </fieldset>
         <button type="submit"id="submit" class="savings-button-color">Savings To Date</button>
+        <section id="newGoal">
+        <button id="clear" class="savings-button-color">Start A New Goal</button>
+        </section>
       </form>
-      <section id="newGoal">
-      <button id="clear" class="savings-button-color">Start A New Goal</button>
-      </section>
 
-      <section id="savingsData"></section>
+      <section id="savingsData">
+      </section>
       <article id="progress-holder">
         <figure id="progress">
         </figure>
