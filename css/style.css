@@ -317,16 +317,13 @@ nav li:hover {
   position: below;
 }
 
-.tooltip:hover:after {
-    background: #333;
-    background: rgba(0,0,0,.8);
-    border-radius: 5px;
-    bottom: 200px;
-    color: #fff;
-    content: attr(title);
-    left: 20%;
-    padding: 5px 15px;
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: -100px;
+    content: "";
+    left: 0%;
     position: absolute;
-    z-index: 98;
-    width: 300px;
+    z-index: 99;
 }
