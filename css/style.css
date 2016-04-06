@@ -1,16 +1,23 @@
 body {
   width: 1000px;
   margin: 0 auto;
-  margin-top: 150px;
-  font-family: 'PT Sans', sans-serif;
+  margin-top: 50px;
+  font-family: 'Nunito', sans-serif;
 }
 
 main {
-      width: 1000px;
+    position: relative;
+
+      width: 960px;
       min-height: 600px;
       background-color: #FFEBAF;
       z-index: 20;
       padding: 20px;
+}
+
+header {
+  width: 1000px;
+  text-align: center;
 }
 
 h2 {
@@ -24,8 +31,11 @@ a {
 
 form {
   text-align: center;
-
 }
+
+/*label, input {
+  display: block;
+}*/
 
 legend{
   margin-top: 75px;
@@ -44,7 +54,7 @@ fieldset {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin-bottom: 20px;
-  
+
 
   }
 
@@ -64,6 +74,7 @@ input {
   float: left;
   margin-left: 80px;
   border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -97,6 +108,15 @@ nav li {
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
     z-index: -1000;
+}
+
+.nav-divider {
+  position: relative;
+  height: 1px;
+  top: 1px;
+  width: 801px;
+  left: 199px;
+  border-top: 3px solid #908563;
 }
 
 nav li:hover {
@@ -175,8 +195,119 @@ nav li:hover {
 .cannoli article {
 }
 
-#income {
+.front-page img {
+  display: inline-block;
 }
 
-#expense{
+.post-it {
+  position: relative;
+  left: 550px;
+  top: 30px;
+}
+
+.title-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.folder-line {
+  position: absolute;
+  right: 932px;
+  top: 262px;
+  z-index: 2000;
+}
+
+#progress-holder {
+  width:400px;
+  height:20px;
+  background:grey;
+}
+
+#progress {
+  width:0;
+  height:100%;
+  background:black;
+  -webkit-transition:width 500ms;
+}
+
+/* From animate.css: */
+
+.animated.hinge {
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+
+
+@-webkit-keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes hinge {
+  0% {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  20%, 60% {
+    -webkit-transform: rotate3d(0, 0, 1, 80deg);
+    transform: rotate3d(0, 0, 1, 80deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+  }
+
+  40%, 80% {
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 700px, 0);
+    transform: translate3d(0, 700px, 0);
+    opacity: 0;
+  }
+}
+
+.hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
 }
