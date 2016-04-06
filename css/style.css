@@ -42,14 +42,14 @@ legend{
   font-size: 24px;
   width: 900px;
   font-family: 'PT Sans', sans-serif;
-  border: 5px solid #49C975;
+
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
 }
 
 fieldset {
-  border: 5px solid #49C975;
+  border: none;
   width: 900px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -127,6 +127,17 @@ nav li:hover {
     1px 1px 3px #000;
 }
 
+.budget-button-color {
+  background-color: #F28805;
+}
+
+.savings-form-color {
+  border: 5px solid #F2E105;
+}
+
+.budget-form-color {
+  border: 5px solid #F28805;
+}
 .fixlist img {
   border: 1px solid black;
   height: 75px;
@@ -139,23 +150,23 @@ nav li:hover {
 }
 
 .home-tab {
-          background-color: #5e0786;
+          background-color: #F20505;
 }
 
 .budget-tab {
-          background-color: #790046;
+          background-color: #F28805;
 }
 
 .savings-tab {
-          background-color: #f59331;
+          background-color: #F2E105;
 }
 
 .aboutus-tab {
-          background-color: #007138;
+          background-color: #50F205;
 }
 
 .resources-tab {
-          background-color: #004c7e;
+          background-color: #7C05F2;
 }
 
 .tools {
