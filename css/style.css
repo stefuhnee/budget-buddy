@@ -327,3 +327,9 @@ nav li:hover {
     position: absolute;
     z-index: 99;
 }
+
+.teamcannoli {
+  font-family: 'Nunito', sans-serif;
+  font-size: 100px;
+  text-align: center;
+}
