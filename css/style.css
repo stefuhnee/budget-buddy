@@ -79,7 +79,6 @@ input {
 
 button {
   border-radius: 10px;
-  background-color: #49C975;
   margin-top: 25px;
   font-family: 'Nunito', sans-serif;
 }
@@ -107,6 +106,10 @@ nav li {
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
     z-index: -1000;
+}
+
+main > section {
+  margin-top: 20px;
 }
 
 .nav-divider {
@@ -238,6 +241,11 @@ nav li:hover {
   -webkit-transition:width 500ms;
 }
 
+#savings-income-event-section {
+  text-align:center;
+  width: 100%;
+  margin-bottom: 20px;
+}
 /* From animate.css: */
 
 .animated.hinge {
