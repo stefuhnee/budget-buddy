@@ -369,3 +369,25 @@ nav li:hover {
   -webkit-animation-name: hinge;
   animation-name: hinge;
 }
+
+.tooltip {
+  display: inline;
+  position: below;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: -100px;
+    content: "";
+    left: 0%;
+    position: absolute;
+    z-index: 99;
+}
+
+.teamcannoli {
+  font-family: 'Nunito', sans-serif;
+  font-size: 100px;
+  text-align: center;
+}
