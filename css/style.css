@@ -252,6 +252,12 @@ nav li:hover {
 
 }
 
+.saved-text {
+  text-align: center;
+  width: 1000px;
+  font-size: 2em;
+}
+
 #canvas-section {
   display: inline-block;;
 
@@ -267,6 +273,8 @@ nav li:hover {
   width:400px;
   height:20px;
   background:grey;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #progress {
@@ -274,6 +282,9 @@ nav li:hover {
   height:100%;
   background:black;
   -webkit-transition:width 500ms;
+  position: relative;
+  bottom: 16px;
+  right: 40px;
 }
 
 #savings-income-event-section {
