@@ -3,21 +3,33 @@ body {
   margin: 0 auto;
   margin-top: 50px;
   font-family: 'Nunito', sans-serif;
+  background: #ffffff;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #b9d4de 100%);
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#b9d4de 100%);  */
+  background: linear-gradient(to bottom,  #ffffff 0%,#b9d4de 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#275c70',GradientType=0 );
+
 }
 
 main {
     position: relative;
-
-      width: 960px;
-      min-height: 600px;
-      background-color: #FFEBAF;
-      z-index: 20;
-      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 960px;
+    min-height: 400px;
+    background-color: #FFEBAF;
+    z-index: 20;
+    padding: 20px;
 }
 
 header {
   width: 1000px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
 }
 
 h2 {
@@ -29,60 +41,58 @@ a {
   text-decoration: none;
 }
 
+button, input, form, label, fieldset {
+  font-family: inherit;
+}
+
 form {
   text-align: center;
 }
 
-/*label, input {
-  display: block;
-}*/
 
 legend{
+  /*display: none;*/
+  border: 0;
   margin-top: 75px;
   font-size: 24px;
   width: 900px;
-  font-family: 'PT Sans', sans-serif;
-  border: 5px solid #49C975;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
+  font-family: 'Nunito', sans-serif;
 }
 
 fieldset {
-  border: 5px solid #49C975;
+  border: 0;
   width: 900px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin-bottom: 20px;
-
-
+  margin-left: auto;
+  margin-right: auto;
   }
 
 label {
-  font-family: 'PT Sans', sans-serif;
-  display: inline-block;
-  float: left;
-  clear: left;
-  width: 250px;
-  text-align: right;
-
-
+  text-align:center;
+  font-family: 'Nunito', sans-serif;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 input {
-  display: inline-block;
-  float: left;
-  margin-left: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 300px;
+  margin-bottom: 20px;
+  /*float: left;*/
+  /*margin-left: 80px;*/
   border-radius: 5px;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
-
 }
 
 button {
   border-radius: 10px;
-  background-color: #49C975;
   margin-top: 25px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 nav ul {
@@ -110,12 +120,16 @@ nav li {
     z-index: -1000;
 }
 
+main > section {
+  margin-top: 20px;
+}
+
 .nav-divider {
-  position: relative;
+  position: absolute;
   height: 1px;
-  top: 1px;
+  top: 0;
+  right: 0;
   width: 801px;
-  left: 199px;
   border-top: 3px solid #908563;
 }
 
@@ -125,6 +139,14 @@ nav li:hover {
    1px 1px 3px #000,
    1px 1px 3px #000,
     1px 1px 3px #000;
+}
+
+.budget-button-color {
+  background-color: #F28805;
+}
+
+.savings-button-color {
+  background-color: #F2E105;
 }
 
 .fixlist img {
@@ -139,23 +161,23 @@ nav li:hover {
 }
 
 .home-tab {
-          background-color: #5e0786;
+          background-color: #F20505;
 }
 
 .budget-tab {
-          background-color: #790046;
+          background-color: #F28805;
 }
 
 .savings-tab {
-          background-color: #f59331;
+          background-color: #F2E105;
 }
 
 .aboutus-tab {
-          background-color: #007138;
+          background-color: #50F205;
 }
 
 .resources-tab {
-          background-color: #004c7e;
+          background-color: #7C05F2;
 }
 
 .tools {
@@ -180,7 +202,6 @@ nav li:hover {
 }
 
 .cannoli img {
-  width: 230px;
   display: block;
 }
 
@@ -190,13 +211,6 @@ nav li:hover {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0px auto;
-}
-
-.cannoli article {
-}
-
-.front-page img {
-  display: inline-block;
 }
 
 .post-it {
@@ -213,8 +227,9 @@ nav li:hover {
 
 .folder-line {
   position: absolute;
-  right: 932px;
-  top: 262px;
+  display: inline;
+  left: 0;
+  top: 0;
   z-index: 2000;
 }
 
@@ -231,6 +246,22 @@ nav li:hover {
   -webkit-transition:width 500ms;
 }
 
+#savings-income-event-section {
+  text-align:center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#savingsForm {
+  width: 100%;
+  margin: auto;
+}
+
+#newGoal {
+  display: inline;
+  text-align: center;
+  margin: auto;
+}
 /* From animate.css: */
 
 .animated.hinge {

@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <img src="img/logo.png" />
+      <img src="img/logo.png" class="title-image"/>
       <nav>
         <ul>
           <a href= "index.html"><li class="home-tab">HOME</li></a>
@@ -22,9 +22,15 @@
       </nav>
     </header>
     <main>
+      <section id="savings-income-event-section">
+        <button id="savings-income-event" class="savings-button-color">Save some of your remaining budget money!</button>
+        <section id="savings-heading-section">
+        </section>
+      </section>
+
       <form id="savingsForm">
         <fieldset>
-          <legend>Savings</legend>
+          <legend class="savings-form-color">Savings</legend>
 
           <label name="savingsFor">What are you saving for?</label>
           <input type="text" name="savingsFor" class="insert" id="saving">
@@ -34,16 +40,21 @@
 
           <label name="addMoney">Add More Money?</label>
           <input type="text" name="addMoney" class="insert" id="addMoney">
+
         </fieldset>
-        <button type="submit"id="submit">Saving To Date</button>
+        <button type="submit"id="submit" class="savings-button-color">Savings To Date</button>
       </form>
+      <section id="newGoal">
+      <button id="clear" class="savings-button-color">Start A New Goal</button>
+      </section>
+
       <section id="savingsData"></section>
-      <section id="progress-holder">
+      <article id="progress-holder">
         <figure id="progress">
         </figure>
-      </section>
+      </article>
     </main>
-    <script src="js/budget.js"></script>
+    <!-- <script src="js/budget.js"></script> -->
     <script src="js/app.js"></script>
     <script src="js/savings.js"></script>
   </body>
