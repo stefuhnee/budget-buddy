@@ -312,16 +312,16 @@ nav li:hover {
   animation-name: hinge;
 }
 
-.tooltip{
+.tooltip {
   display: inline;
-  position: bottom;
+  position: below;
 }
 
-.tooltip:hover:after{
+.tooltip:hover:after {
     background: #333;
     background: rgba(0,0,0,.8);
     border-radius: 5px;
-    bottom: -250px;
+    bottom: 200px;
     color: #fff;
     content: attr(title);
     left: 20%;
