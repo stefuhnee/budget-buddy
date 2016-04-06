@@ -250,6 +250,7 @@ nav li:hover {
 
 .pie-legend {
   list-style: none;
+
 }
 
 #canvas-section {
@@ -259,10 +260,8 @@ nav li:hover {
 
 #chart-legend-location {
   display: inline-block;
-  margin-bottom:  100px;
   margin-left: 50px;
-
-
+  
 }
 
 #progress-holder {

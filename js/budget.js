@@ -107,7 +107,7 @@ function collectBudgetData(event){
     },
     {
       value: transportationExpense.expense,
-      color: '#191183',
+      color: '#5C92F2',
       highlight: '#46F2E5',
       label: 'Transportation'
     },
