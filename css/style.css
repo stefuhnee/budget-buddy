@@ -205,15 +205,30 @@ nav li:hover {
 }
 
 .cannoli img {
-  display: block;
+  display: inline;
+  height: 200px;
+  float: left;
 }
 
 .cannoli {
-  padding-top: 90px;
+  padding-top: 0px;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  margin: 0px auto;
+  position: relative;
+}
+
+.cannoli article {
+  flex-basis: 100%;
+  display: table;
+  height: 200px;
+}
+
+.cannoli p {
+height: 200px;
+position: relative;
+top: 40px;
 }
 
 .post-it {
@@ -260,6 +275,10 @@ nav li:hover {
   text-align: center;
   width: 1000px;
   font-size: 2em;
+}
+
+.about-us-main {
+  text-align: center;
 }
 
 #canvas-section {
@@ -406,6 +425,6 @@ nav li:hover {
 
 .teamcannoli {
   font-family: 'Nunito', sans-serif;
-  font-size: 100px;
-  text-align: center;
+  font-size: 50px;
+  flex-basis: 100%;
 }
