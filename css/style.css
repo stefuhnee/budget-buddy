@@ -233,6 +233,37 @@ nav li:hover {
   z-index: 2000;
 }
 
+.pie-legend span {
+  text-align: center;
+  height: 20px;
+  width: 200px;
+  display: inline-block;
+  border: 1px solid black;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow:
+1px 1px 3px #000,
+1px 1px 3px #000,
+1px 1px 3px #000,
+ 1px 1px 3px #000;
+}
+
+.pie-legend {
+  list-style: none;
+
+}
+
+#canvas-section {
+  display: inline-block;;
+
+}
+
+#chart-legend-location {
+  display: inline-block;
+  margin-left: 50px;
+
+}
+
 #progress-holder {
   width:400px;
   height:20px;

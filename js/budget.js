@@ -107,13 +107,20 @@ function collectBudgetData(event){
     },
     {
       value: transportationExpense.expense,
-      color: '#4346F2',
+      color: '#5C92F2',
       highlight: '#46F2E5',
       label: 'Transportation'
+    },
+    {
+      value: incomeRemaining,
+      color: '#F221AD',
+      highlight: '#46F2E5',
+      label: 'Remaining Income'
     }
   ];
-
   var myPieChart = new Chart(context).Pie(data);
+  document.getElementById('chart-legend-location').innerHTML = myPieChart.generateLegend();
+  console.log(myPieChart.generateLegend());
   monthlyIncomeRemaining();
 }
 
