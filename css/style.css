@@ -3,6 +3,12 @@ body {
   margin: 0 auto;
   margin-top: 50px;
   font-family: 'Nunito', sans-serif;
+  background: #ffffff;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #b9d4de 100%);
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#b9d4de 100%);  */
+  background: linear-gradient(to bottom,  #ffffff 0%,#b9d4de 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#275c70',GradientType=0 );
+
 }
 
 main {
@@ -11,7 +17,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     width: 960px;
-    min-height: 600px;
+    min-height: 400px;
     background-color: #FFEBAF;
     z-index: 20;
     padding: 20px;
