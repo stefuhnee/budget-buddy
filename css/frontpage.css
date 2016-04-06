@@ -6,6 +6,17 @@ header {
   width: 200%;
   height: 75px;
   background-color: black;
+  color: white;
+}
+
+section {
+  position: fixed;
+  left: 0%;
+  height: 75px;
+  width: 20%;
+  background-position: center;
+  color: white;
+  font-family: 'Nunito', sans-serif;
 }
 
 footer {
