@@ -63,38 +63,38 @@ function collectBudgetData(event){
 
     {
       value: rentExpense.expense,
-      color: '#F7464A',
-      highlight: '#FF5A5E',
+      color: '#7C05F2',
+      highlight: '#46F2E5',
       label: 'Rent'
     },
     {
       value: foodExpense.expense,
-      color: '#46BFBD',
-      highlight: '#5AD3D1',
+      color: '#50F205',
+      highlight: '#46F2E5',
       label: 'Food'
     },
     {
       value: insuranceExpense.expense,
-      color: '#FDB45C',
-      highlight: '#FFC870',
+      color: '#F2E105',
+      highlight: '#46F2E5',
       label: 'Insurance'
     },
     {
       value: utilitiesExpense.expense,
-      color: '#F7464A',
-      highlight: '#FF5A5E',
+      color: '#F28805',
+      highlight: '#46F2E5',
       label: 'Utilities'
     },
     {
       value: loansExpense.expense,
-      color: '#46BFBD',
-      highlight: '#5AD3D1',
+      color: '#F20505',
+      highlight: '#46F2E5',
       label: 'Loans'
     },
     {
       value: transportationExpense.expense,
-      color: '#FDB45C',
-      highlight: '#FFC870',
+      color: '#4346F2',
+      highlight: '#46F2E5',
       label: 'Transportation'
     }
   ];
