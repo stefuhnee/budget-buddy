@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/stefuhnee/budget-buddy.png?label=ready&title=Ready)](https://waffle.io/stefuhnee/budget-buddy)
 # budget-buddy
 Team Cannoli: Stefanie, Vic, Dan, Jeff
 Code Fellows seattle-201d3
