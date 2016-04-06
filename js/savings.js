@@ -11,6 +11,7 @@ var progress = document.getElementById('progress');
 
 console.log('javascript is working dummy');
 
+var clearButton = document.getElementById('clear');
 var savingsForm = document.getElementById('savingsForm');
 
 // Collects user info from savings form (event handler)
@@ -37,6 +38,7 @@ function collectSavingsData(event){
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
 
+  //button to display savings data
   var youHaveSaved = document.createElement('article');
   savingsData = document.getElementById('savingsData');
   savingsData.textContent = '';
@@ -54,7 +56,15 @@ function updateProgress(perc) {
   progress.style.width = perc + '%';
 };
 
+//button to start a new goal, clear savings from local storage
+var clearLocalStorage = function(event){
+  event.preventDefault();
+  console.log('cleared data');
+  localStorage.clear();
+};
+
 // Event listener
+clearButton.addEventListener('click', clearLocalStorage);
 savingsForm.addEventListener('submit', collectSavingsData);
 
 console.log('monthly income remaining: ', monthlyIncomeRemaining());
