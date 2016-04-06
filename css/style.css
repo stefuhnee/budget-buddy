@@ -7,17 +7,23 @@ body {
 
 main {
     position: relative;
-
-      width: 960px;
-      min-height: 600px;
-      background-color: #FFEBAF;
-      z-index: 20;
-      padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 960px;
+    min-height: 600px;
+    background-color: #FFEBAF;
+    z-index: 20;
+    padding: 20px;
 }
 
 header {
   width: 1000px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
 }
 
 h2 {
@@ -33,23 +39,19 @@ form {
   text-align: center;
 }
 
-/*label, input {
-  display: block;
-}*/
 
 legend{
   margin-top: 75px;
   font-size: 24px;
   width: 900px;
-  font-family: 'PT Sans', sans-serif;
-  border: 5px solid #49C975;
+  font-family: 'Nunito', sans-serif;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
 }
 
 fieldset {
-  border: 5px solid #49C975;
+  border: none;
   width: 900px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -59,14 +61,12 @@ fieldset {
   }
 
 label {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   display: inline-block;
   float: left;
   clear: left;
   width: 250px;
   text-align: right;
-
-
 }
 
 input {
@@ -75,14 +75,13 @@ input {
   margin-left: 80px;
   border-radius: 5px;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
-
 }
 
 button {
   border-radius: 10px;
   background-color: #49C975;
   margin-top: 25px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 nav ul {
@@ -111,11 +110,11 @@ nav li {
 }
 
 .nav-divider {
-  position: relative;
+  position: absolute;
   height: 1px;
-  top: 1px;
+  top: 0;
+  right: 0;
   width: 801px;
-  left: 199px;
   border-top: 3px solid #908563;
 }
 
@@ -127,6 +126,21 @@ nav li:hover {
     1px 1px 3px #000;
 }
 
+.budget-button-color {
+  background-color: #F28805;
+}
+
+.savings-button-color {
+  background-color: #F2E105;
+}
+
+.savings-form-color {
+  border: 3px solid #F2E105;
+}
+
+.budget-form-color {
+  border: 3px solid #F28805;
+}
 .fixlist img {
   border: 1px solid black;
   height: 75px;
@@ -139,23 +153,23 @@ nav li:hover {
 }
 
 .home-tab {
-          background-color: #5e0786;
+          background-color: #F20505;
 }
 
 .budget-tab {
-          background-color: #790046;
+          background-color: #F28805;
 }
 
 .savings-tab {
-          background-color: #f59331;
+          background-color: #F2E105;
 }
 
 .aboutus-tab {
-          background-color: #007138;
+          background-color: #50F205;
 }
 
 .resources-tab {
-          background-color: #004c7e;
+          background-color: #7C05F2;
 }
 
 .tools {
@@ -180,7 +194,6 @@ nav li:hover {
 }
 
 .cannoli img {
-  width: 230px;
   display: block;
 }
 
@@ -190,13 +203,6 @@ nav li:hover {
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0px auto;
-}
-
-.cannoli article {
-}
-
-.front-page img {
-  display: inline-block;
 }
 
 .post-it {
@@ -213,8 +219,9 @@ nav li:hover {
 
 .folder-line {
   position: absolute;
-  right: 932px;
-  top: 262px;
+  display: inline;
+  left: 0;
+  top: 0;
   z-index: 2000;
 }
 
