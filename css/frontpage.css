@@ -4,19 +4,21 @@ header {
   top: 0;
   left: -50%;
   width: 200%;
-  height: 75px;
+  height: 100px;
   background-color: black;
   color: white;
 }
 
 section {
   position: fixed;
-  left: 0%;
+  top: 45px;
+  right: 7%;
   height: 75px;
-  width: 20%;
+  width: 400px;
   background-position: center;
   color: white;
   font-family: 'Nunito', sans-serif;
+  font-size: 60px;
 }
 
 footer {
@@ -24,7 +26,7 @@ footer {
   left: -50%;
   bottom: 0;
   width: 200%;
-  height: 75px;
+  height: 100px;
   background-color: black;
 }
 
