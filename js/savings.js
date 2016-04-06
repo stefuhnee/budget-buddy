@@ -11,6 +11,7 @@ var progress = document.getElementById('progress');
 var savingsForm = document.getElementById('savingsForm');
 var savingsIncomeEvent = document.getElementById('savings-income-event');
 var savingsIncomeEventSection = document.getElementById('savings-income-event-section');
+var savingsHeadingSection = document.getElementById('savings-heading-section');
 var incomeRemainingHeading;
 var incomeRemaining;
 
@@ -54,12 +55,15 @@ function collectSavingsData(event){
 
 function displayRemainingIncome(event) {
   event.preventDefault();
+  if (document.getElementsByTagName('h2')[0]) {
+    savingsHeadingSection.innerHTML = '';
+  }
   console.log('incomeRemaining' + incomeRemaining);
   incomeRemainingHeading = document.createElement('h2');
   incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
   console.log('income from local storage ' + incomeRemaining);
   incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget.';
-  savingsIncomeEventSection.appendChild(incomeRemainingHeading);
+  savingsHeadingSection.appendChild(incomeRemainingHeading);
 }
 
 // Progress bar updating function
