@@ -252,6 +252,14 @@ nav li:hover {
   list-style: none;
 }
 
+.canvas-section {
+  float: left;
+}
+
+.chart-legend-location {
+  float: right;
+}
+
 #progress-holder {
   width:400px;
   height:20px;
