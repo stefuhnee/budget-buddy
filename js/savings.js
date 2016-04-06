@@ -53,9 +53,14 @@ function collectSavingsData(event){
 
   //button to display savings data
   var youHaveSaved = document.createElement('article');
+  youHaveSaved.setAttribute('class', 'saved-text');
   savingsData = document.getElementById('savingsData');
   savingsData.textContent = '';
-  youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
+  if (currentSavings <= howMuch) {
+    youHaveSaved.textContent = 'You have saved $' + currentSavings + ' towards the $' + howMuch + ' needed for ' + savingsFor + '!';
+  } else {
+    youHaveSaved.textContent = 'Congratulations! You have met your goal of $' + howMuch + '!';
+  }
   savingsData.appendChild(youHaveSaved);
 
 // Progress bar
