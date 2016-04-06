@@ -6,11 +6,12 @@
     </title>
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|Nunito:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <img src="img/logo.png" />
+      <img src="img/logo.png" class="title-image"/>
+      <img src="img/folderline.png" class="folder-line" />
       <nav>
         <ul>
           <a href= "index.html"><li class="home-tab" id="current">HOME</li></a>
@@ -19,10 +20,16 @@
           <a href= "about-us.html"><li class="aboutus-tab">ABOUT US</li></a>
           <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
         </ul>
+        <div class="nav-divider"></div>
       </nav>
     </header>
-    <main>
-      <img src="img/postit.png" />
+    <main class="front-page">
+      <article class="post-it">
+        <img src="img/postit.png" class="animated hinge"/>
+      </article>
+      <!-- <article class="logo">
+        <img src="img/bb_logo.png" />
+      </article> -->
     </main>
     <script src="js/app.js"></script>
   </body>

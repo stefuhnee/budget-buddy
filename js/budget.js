@@ -111,6 +111,5 @@ function monthlyIncomeRemaining() {
   return incomeRemaining;
 }
 
-
 // event listener
 form.addEventListener('submit', collectBudgetData);
