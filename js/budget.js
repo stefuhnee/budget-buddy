@@ -110,10 +110,17 @@ function collectBudgetData(event){
       color: '#4346F2',
       highlight: '#46F2E5',
       label: 'Transportation'
+    },
+    {
+      value: incomeRemaining,
+      color: '#DA6BF2',
+      highlight: '#46F2E5',
+      label: 'Remaining Income'
     }
   ];
-
+  myPieChart.generateLegend();
   var myPieChart = new Chart(context).Pie(data);
+
   monthlyIncomeRemaining();
 }
 
