@@ -20,40 +20,46 @@
       </nav>
     </header>
     <main>
-      <form id="form">
-        <fieldset  id="income">
-          <legend class="budget-form-color">Budget</legend>
+        <section>
+        <form id="form">
+          <fieldset  id="income">
+            <legend class="budget-form-color">Budget</legend>
 
-          <label name="enterIncome">Budget Income</label>
-          <input type="text" name="enterIncome" class="insert" id="income">
-        </fieldset>
+            <label name="enterIncome">Budget Income</label>
+            <input type="text" name="enterIncome" class="insert" id="income">
+          </fieldset>
 
-        <fieldset id="expenses">
-          <legend class="budget-form-color">Budget Expenses</legend>
+          <fieldset id="expenses">
+            <legend class="budget-form-color">Budget Expenses</legend>
 
-          <label name="rentMortgage">Rent/Mortgage</label>
-          <input type="text" name="rentMortgage" class="insert" id="rent">
+            <label name="rentMortgage">Rent/Mortgage</label>
+            <input type="text" name="rentMortgage" class="insert" id="rent">
 
-          <label name="foodGroceries">Food/Groceries</label>
-          <input type="text" name="foodGroceries" class="insert" id="food">
+            <label name="foodGroceries">Food/Groceries</label>
+            <input type="text" name="foodGroceries" class="insert" id="food">
 
-          <label name="insurance">Insurance</label>
-          <input type="text" name="insurance" class="insert" id="insure">
-          <br>
-          <label name="utilities">Utilities</label>
-          <input type="text" name="utilities" class="insert" id="util">
+            <label name="insurance">Insurance</label>
+            <input type="text" name="insurance" class="insert" id="insure">
+            <br>
+            <label name="utilities">Utilities</label>
+            <input type="text" name="utilities" class="insert" id="util">
 
-          <label name="loansCcDebt">Loans/Credit Cards/Debt</label>
-          <input type="text" name="loansCcDebt" class="insert" id="loan">
+            <label name="loansCcDebt">Loans/Credit Cards/Debt</label>
+            <input type="text" name="loansCcDebt" class="insert" id="loan">
 
-          <label name="transportation">Transportation</label>
-          <input type="text" name="transportation" class="insert" id="tran">
+            <label name="transportation">Transportation</label>
+            <input type="text" name="transportation" class="insert" id="tran">
 
 
-        </fieldset>
-          <button type="submit" id="submit" class="budget-button-color">Pie Chart</button>
-      </form>
-      <section id="canvas-section">
+          </fieldset>
+            <button type="submit" id="submit" class="budget-button-color">Pie Chart</button>
+        </form>
+        <section>
+          <section id="canvas-section">
+          </section>
+          <section id="chart-legend-location">
+          </section>
+        </section>
       </section>
     </main>
     <script src="js/chart.js"></script>
