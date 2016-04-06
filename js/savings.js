@@ -86,6 +86,7 @@ function displayRemainingIncome(event) {
   percentageSavingsInput.setAttribute('name', 'userPercentage');
   percentageSavingsButton = document.createElement('button');
   percentageSavingsButton.setAttribute('type', 'submit');
+  percentageSavingsButton.setAttribute('class', 'savings-button-color');
   percentageSavingsButton.textContent = 'Save Amount';
   savingsIncomeEventSection.appendChild(percentageSavingsForm);
   percentageSavingsForm.appendChild(percentageSavingsFieldset);
