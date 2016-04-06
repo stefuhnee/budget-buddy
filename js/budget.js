@@ -1,4 +1,6 @@
 var incomeRemaining;
+var monthlyIncome;
+var context;
 console.log('javascript is working');
 
 // Event handler -- assigns value to each object according to user input
@@ -22,9 +24,9 @@ function collectBudgetData(event){
   canvasEl.setAttribute('class', 'canvas-pie-chart');
   canvasEl.setAttribute('width', '400px');
   canvasEl.setAttribute('height', '400px');
-  var context = canvasEl.getContext('2d');
+  context = canvasEl.getContext('2d');
 
-  var monthlyIncome = parseInt(event.target.enterIncome.value);
+  monthlyIncome = parseInt(event.target.enterIncome.value);
   console.log(monthlyIncome);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
   console.log(rentExpense);
