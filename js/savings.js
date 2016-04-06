@@ -18,6 +18,9 @@ var percentageSavingsFieldset;
 var percentageSavingsLabel;
 var percentageSavingsInput;
 var percentageSavingsButton;
+var userPercentageValue;
+var savingsAmount;
+var addMoneyInput = document.getElementById('addMoney');
 
 console.log('javascript is working dummy');
 
@@ -25,11 +28,11 @@ console.log('javascript is working dummy');
 function collectSavingsData(event){
   event.preventDefault();
 
-  var savingsFor = event.target.savingsFor.value;
+  savingsFor = event.target.savingsFor.value;
   console.log('Savings For: ', savingsFor);
-  var howMuch = parseInt(event.target.howMuch.value);
+  howMuch = parseInt(event.target.howMuch.value);
   console.log('How much to Save', howMuch);
-  var addMoney = parseInt(event.target.addMoney.value);
+  addMoney = parseInt(event.target.addMoney.value);
   console.log('How much to add to Savings', addMoney);
   // Grabs current savings from local storage and adds inputted value to it.
   currentSavings = JSON.parse(localStorage.getItem('Current Savings'));
@@ -57,6 +60,7 @@ function collectSavingsData(event){
   };
 }
 
+// Event handler, on button click displays remaining income and asks if they'd like to save a percentage. Appends form and fieldset.
 function displayRemainingIncome(event) {
   event.preventDefault();
   if (document.getElementsByTagName('h2')[0]) {
@@ -71,11 +75,11 @@ function displayRemainingIncome(event) {
   percentageSavingsFieldset = document.createElement('fieldset');
   percentageSavingsForm = document.createElement('form');
   percentageSavingsLabel = document.createElement('label');
-  percentageSavingsLabel.setAttribute('name', 'user-percentage');
+  percentageSavingsLabel.setAttribute('name', 'userPercentage');
   percentageSavingsLabel.textContent = 'Enter a Percentage to Save:';
   percentageSavingsInput = document.createElement('input');
   percentageSavingsInput.setAttribute('type', 'text');
-  percentageSavingsInput.setAttribute('name', 'user-percentage');
+  percentageSavingsInput.setAttribute('name', 'userPercentage');
   percentageSavingsButton = document.createElement('button');
   percentageSavingsButton.setAttribute('type', 'submit');
   percentageSavingsButton.textContent = 'Save Amount';
@@ -89,6 +93,12 @@ function displayRemainingIncome(event) {
 
 function collectPercentageData(event) {
   event.preventDefault();
+  userPercentageValue = parseInt(event.target.userPercentage.value);
+  userPercentageValue /= 100;
+  console.log('User percentage value inputted ' + userPercentageValue);
+  savingsAmount = userPercentageValue * incomeRemaining;
+  console.log('Savings amount in dollars ' + savingsAmount);
+  addMoneyInput.setAttribute('value', savingsAmount);
 }
 
 // Progress bar updating function
