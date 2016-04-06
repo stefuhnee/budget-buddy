@@ -33,16 +33,12 @@ form {
   text-align: center;
 }
 
-/*label, input {
-  display: block;
-}*/
 
 legend{
   margin-top: 75px;
   font-size: 24px;
   width: 900px;
   font-family: 'Nunito', sans-serif;
-
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 
@@ -65,8 +61,6 @@ label {
   clear: left;
   width: 250px;
   text-align: right;
-
-
 }
 
 input {
@@ -75,7 +69,6 @@ input {
   margin-left: 80px;
   border-radius: 5px;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
-
 }
 
 button {
@@ -136,11 +129,11 @@ nav li:hover {
 }
 
 .savings-form-color {
-  border: 5px solid #F2E105;
+  border: 3px solid #F2E105;
 }
 
 .budget-form-color {
-  border: 5px solid #F28805;
+  border: 3px solid #F28805;
 }
 .fixlist img {
   border: 1px solid black;
