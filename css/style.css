@@ -246,9 +246,10 @@ nav li:hover {
 1px 1px 3px #000,
 1px 1px 3px #000,
  1px 1px 3px #000;
+}
 
-
-
+.pie-legend {
+  list-style: none;
 }
 
 #progress-holder {
