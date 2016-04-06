@@ -14,6 +14,10 @@ var savingsIncomeEventSection = document.getElementById('savings-income-event-se
 var savingsHeadingSection = document.getElementById('savings-heading-section');
 var incomeRemainingHeading;
 var incomeRemaining;
+var percentageSavingsFieldset;
+var percentageSavingsLabel;
+var percentageSavingsInput;
+var percentageSavingsButton;
 
 console.log('javascript is working dummy');
 
@@ -62,8 +66,29 @@ function displayRemainingIncome(event) {
   incomeRemainingHeading = document.createElement('h2');
   incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
   console.log('income from local storage ' + incomeRemaining);
-  incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget.';
+  incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
   savingsHeadingSection.appendChild(incomeRemainingHeading);
+  percentageSavingsFieldset = document.createElement('fieldset');
+  percentageSavingsForm = document.createElement('form');
+  percentageSavingsLabel = document.createElement('label');
+  percentageSavingsLabel.setAttribute('name', 'user-percentage');
+  percentageSavingsLabel.textContent = 'Enter a Percentage to Save:';
+  percentageSavingsInput = document.createElement('input');
+  percentageSavingsInput.setAttribute('type', 'text');
+  percentageSavingsInput.setAttribute('name', 'user-percentage');
+  percentageSavingsButton = document.createElement('button');
+  percentageSavingsButton.setAttribute('type', 'submit');
+  percentageSavingsButton.textContent = 'Save Amount';
+  savingsIncomeEventSection.appendChild(percentageSavingsForm);
+  percentageSavingsForm.appendChild(percentageSavingsFieldset);
+  percentageSavingsFieldset.appendChild(percentageSavingsLabel);
+  percentageSavingsFieldset.appendChild(percentageSavingsInput);
+  percentageSavingsForm.appendChild(percentageSavingsButton);
+  percentageSavingsForm.addEventListener('submit', collectPercentageData);
+}
+
+function collectPercentageData(event) {
+  event.preventDefault();
 }
 
 // Progress bar updating function
