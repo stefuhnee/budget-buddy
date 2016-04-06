@@ -8,10 +8,13 @@ var savingsData;
 var monthlyIncome = JSON.parse(localStorage.getItem('Monthly Income'));
 var fullBudget = JSON.parse(localStorage.getItem('Budget Data'));
 var progress = document.getElementById('progress');
+var savingsForm = document.getElementById('savingsForm');
+var savingsIncomeEvent = document.getElementById('savings-income-event');
+var savingsIncomeEventSection = document.getElementById('savings-income-event-section');
+var incomeRemainingHeading;
+var incomeRemaining;
 
 console.log('javascript is working dummy');
-
-var savingsForm = document.getElementById('savingsForm');
 
 // Collects user info from savings form (event handler)
 function collectSavingsData(event){
@@ -49,12 +52,21 @@ function collectSavingsData(event){
   };
 }
 
+function displayRemainingIncome(event) {
+  event.preventDefault();
+  console.log('incomeRemaining' + incomeRemaining);
+  incomeRemainingHeading = document.createElement('h2');
+  incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
+  console.log('income from local storage ' + incomeRemaining);
+  incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget.';
+  savingsIncomeEventSection.appendChild(incomeRemainingHeading);
+}
+
 // Progress bar updating function
 function updateProgress(perc) {
   progress.style.width = perc + '%';
 };
 
 // Event listener
+savingsIncomeEvent.addEventListener('click', displayRemainingIncome);
 savingsForm.addEventListener('submit', collectSavingsData);
-
-console.log('monthly income remaining: ', monthlyIncomeRemaining());

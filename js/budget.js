@@ -1,8 +1,11 @@
+var incomeRemaining;
 console.log('javascript is working');
 
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
+
+  // If there is a pie chart already on the page, clear it. If not, add it.
   if (document.getElementsByClassName('canvas-pie-chart')[0]){
     console.log('benton says');
     var canvasSection = document.getElementById('canvas-section');
@@ -36,9 +39,20 @@ function collectBudgetData(event){
   transportationExpense.expense = parseInt(event.target.transportation.value);
   console.log(transportationExpense);
 
+  // Calculates remaining income for the month after submitting expenses
+  function monthlyIncomeRemaining() {
+    incomeRemaining = monthlyIncome;
+    for (var i = 0; i < fullBudget.length; i++) {
+      incomeRemaining -= fullBudget[i].expense;
+    }
+    console.log('Monthly income remaining ' + incomeRemaining);
+    return incomeRemaining;
+  }
+
   // Storing objects and monthly income in local storage
   localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
   localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
+  localStorage.setItem('Monthly Income Remaining', JSON.stringify(monthlyIncomeRemaining()));
 
   function PieChartData(){
     this.allPieData = [];
@@ -100,15 +114,7 @@ function collectBudgetData(event){
   ];
 
   var myPieChart = new Chart(context).Pie(data);
-}
-
-// Calculates remaining income for the month after submitting expenses
-function monthlyIncomeRemaining() {
-  incomeRemaining = monthlyIncome;
-  for (var i = 0; i < fullBudget.length; i++) {
-    incomeRemaining -= fullBudget[i].expense;
-  }
-  return incomeRemaining;
+  monthlyIncomeRemaining();
 }
 
 // event listener
