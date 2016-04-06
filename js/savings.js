@@ -7,6 +7,7 @@ var incomeRemaining;
 var savingsData;
 var monthlyIncome = JSON.parse(localStorage.getItem('Monthly Income'));
 var fullBudget = JSON.parse(localStorage.getItem('Budget Data'));
+var progress = document.getElementById('progress');
 
 console.log('javascript is working dummy');
 
@@ -41,7 +42,17 @@ function collectSavingsData(event){
   savingsData.textContent = '';
   youHaveSaved.textContent = 'You have saved ' + currentSavings + ' towards the ' + howMuch + ' needed for ' + savingsFor + '!';
   savingsData.appendChild(youHaveSaved);
+
+// Progress bar
+  if (currentSavings <= howMuch) {
+    updateProgress((currentSavings / howMuch) * 100);
+  };
 }
+
+// Progress bar updating function
+function updateProgress(perc) {
+  progress.style.width = perc + '%';
+};
 
 // Event listener
 savingsForm.addEventListener('submit', collectSavingsData);

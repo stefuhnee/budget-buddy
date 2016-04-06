@@ -2,7 +2,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   margin-top: 50px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
 }
 
 main {
@@ -31,8 +31,11 @@ a {
 
 form {
   text-align: center;
-
 }
+
+/*label, input {
+  display: block;
+}*/
 
 legend{
   margin-top: 75px;
@@ -71,6 +74,7 @@ input {
   float: left;
   margin-left: 80px;
   border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
 
 }
 
@@ -212,6 +216,19 @@ nav li:hover {
   right: 932px;
   top: 262px;
   z-index: 2000;
+}
+
+#progress-holder {
+  width:400px;
+  height:20px;
+  background:grey;
+}
+
+#progress {
+  width:0;
+  height:100%;
+  background:black;
+  -webkit-transition:width 500ms;
 }
 
 /* From animate.css: */
