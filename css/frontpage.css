@@ -1,0 +1,51 @@
+
+header {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+
+section {
+  position: fixed;
+  top: 45px;
+  right: 7%;
+  height: 75px;
+  width: 400px;
+  background-position: center;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 60px;
+}
+
+footer {
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 100px;
+  background-color: black;
+}
+
+#money {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+
+#money img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%;
+}
