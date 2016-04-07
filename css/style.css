@@ -106,7 +106,7 @@ nav li {
     border-left: 20px solid #FFEBAF;
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
-    z-index: -1000;
+    z-index: -10;
 }
 
 nav li:hover {
@@ -175,23 +175,23 @@ main > section {
 }
 
 .home-tab {
-          background-color: #F20505;
+  background-color: #F20505;
 }
 
 .budget-tab {
-          background-color: #F28805;
+  background-color: #F28805;
 }
 
 .savings-tab {
-          background-color: #F2E105;
+  background-color: #F2E105;
 }
 
 .aboutus-tab {
-          background-color: #50F205;
+  background-color: #50F205;
 }
 
 .resources-tab {
-          background-color: #7C05F2;
+  background-color: #7C05F2;
 }
 
 .tools {
@@ -228,7 +228,7 @@ main > section {
   display: inline;
   left: 0;
   top: 0;
-  z-index: 2000;
+  z-index: 100;
 }
 
 .fixlist {
@@ -372,9 +372,23 @@ text-align: center;
   color: white;
 }
 
-#current {
+.current {
   background-color: #FFEBAF;
   color: #000;
+  text-shadow: none;
+  border-bottom: 3px solid #FFEBAF;
+  position: relative;
+  z-index: 50;
+}
+
+.home-tab.current {
+    border-bottom: none;
+    text-shadow: none;
+    z-index: -10;
+}
+
+
+.current:hover {
   text-shadow: none;
 }
 
