@@ -50,6 +50,7 @@ function collectBudgetData(event){
   transportationExpense.expense = parseInt(event.target.transportation.value);
 
   var incomeRemaining = monthlyIncomeRemaining();
+  localStorage.setItem('Monthly Income Remaining', JSON.stringify(incomeRemaining));
 
   var data = [
     {
@@ -124,7 +125,6 @@ function collectSavingsData(event){
   // Storing objects and monthly income in local storage
   localStorage.setItem('Total Savings Goal', JSON.stringify(howMuch));
   localStorage.setItem('Savings Remaining', JSON.stringify(savingsRemaining));
-  localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
 
@@ -181,7 +181,7 @@ function collectPercentageData(event) {
   userPercentageValue = parseInt(event.target.userPercentage.value);
   userPercentageValue /= 100;
   console.log('User percentage value inputted ' + userPercentageValue);
-  savingsAmount = userPercentageValue * incomeRemaining;
+  savingsAmount = Math.round(userPercentageValue * incomeRemaining);
   console.log('Savings amount in dollars ' + savingsAmount);
   addMoneyInput.setAttribute('value', savingsAmount);
 }
