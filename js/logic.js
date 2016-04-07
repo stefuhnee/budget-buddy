@@ -3,7 +3,8 @@ function clearLocalStorage() {
   localStorage.clear();
   var form = document.getElementById('savingsForm');
   form.reset();
-  youHaveSaved.textContent = '';
+  var section = document.getElementById('savingsData');
+  section.removeChild(section.childNodes[0]);
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting
