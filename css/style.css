@@ -2,7 +2,7 @@ body {
   width: 1000px;
   margin: 0 auto;
   margin-top: 50px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   background: #ffffff;
   background: -moz-linear-gradient(top,  #ffffff 0%, #b9d4de 100%);
   background: -webkit-linear-gradient(top,  #ffffff 0%,#b9d4de 100%);  */
@@ -86,8 +86,9 @@ form {
 
 label {
   text-align:center;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'PT Sans', sans-serif;
   display: block;
+  font-weight: lighter;
 }
 
 .income-input input {
@@ -106,7 +107,7 @@ input {
 button {
   border-radius: 10px;
   margin-top: 25px;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'PT Sans', sans-serif;
 }
 
 nav ul {
