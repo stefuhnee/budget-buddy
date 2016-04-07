@@ -21,7 +21,8 @@ main {
   background-color: #FFEBAF;
   z-index: 20;
   padding: 20px;
-  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+  border-right: 3px solid #908563;
+  border-bottom: 3px solid #908563;
 }
 
 header {
@@ -61,19 +62,11 @@ form {
  text-align: center;
 }
 
-.income-input {
-  flex-basis: 100%
-}
-
 label {
   text-align:center;
   font-family: 'PT Sans', sans-serif;
   display: block;
   font-weight: lighter;
-}
-
-.income-input input {
-  margin-bottom: 50px;
 }
 
 input {
@@ -116,8 +109,24 @@ nav li {
     z-index: -1000;
 }
 
+nav li:hover {
+  text-shadow:
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000;
+}
+
 main > section {
   margin-top: 20px;
+}
+
+.not-index-main {
+  border: 3px solid #908563;
+}
+
+.income-input {
+  flex-basis: 100%
 }
 
 .nav-divider {
@@ -129,12 +138,13 @@ main > section {
   border-top: 3px solid #908563;
 }
 
-nav li:hover {
-     text-shadow:
-  1px 1px 3px #000,
-   1px 1px 3px #000,
-   1px 1px 3px #000,
-    1px 1px 3px #000;
+.left-side-divider {
+  position: absolute;
+  height: 400px;
+  width: 1px;
+  left: -1px;
+  top:43px;
+  border-left: 3px solid #908563;
 }
 
 .budget-button-color {
@@ -143,17 +153,6 @@ nav li:hover {
 
 .savings-button-color {
   background-color: #F2E105;
-}
-
-.fixlist img {
-  border: 1px solid black;
-  height: 75px;
-  opacity: 0.8;
-  margin: 30px 70px 10px 70px;
-}
-
-.fixlist img:hover {
-  opacity: 1;
 }
 
 .home-tab {
@@ -182,14 +181,69 @@ nav li:hover {
   text-align: center;
 }
 
+.cannoli {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.cannoli .stefanie, .cannoli .vic {
+  padding-right: 10px;
+}
+
+.cannoli .jeff, .cannoli .dan {
+  padding-left: 10px;
+}
+
+.post-it {
+  position: relative;
+  left: 550px;
+  top: 30px;
+}
+
+.title-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.folder-line {
+  position: absolute;
+  display: inline;
+  left: 0;
+  top: 0;
+  z-index: 2000;
+}
+
 .fixlist {
   display: block;
   width: 1000px;
 }
 
+.pie-legend {
+  list-style: none;
+}
+
 .fixlist li {
   display: inline;
   width: 900px;
+}
+
+.fixlist img {
+  border: 1px solid black;
+  height: 75px;
+  opacity: 0.8;
+  margin: 30px 70px 10px 70px;
+}
+
+.fixlist img:hover {
+  opacity: 1;
+}
+
+.income-input input {
+  margin-bottom: 50px;
 }
 
 .cannoli img {
@@ -201,28 +255,12 @@ nav li:hover {
   transform: scale(1.3);
 }
 
-.cannoli {
-  padding-top: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-
 .cannoli article {
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
   height: 130px;
   border: 1px solid black;
-}
-
-.cannoli .stefanie, .cannoli .vic {
-  padding-right: 10px;
-}
-
-.cannoli .jeff, .cannoli .dan {
-  padding-left: 10px;
 }
 
 .cannoli .jeff img, .cannoli .dan img {
@@ -257,26 +295,6 @@ nav li:hover {
   top: 15px;
 }
 
-.post-it {
-  position: relative;
-  left: 550px;
-  top: 30px;
-}
-
-.title-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.folder-line {
-  position: absolute;
-  display: inline;
-  left: 0;
-  top: 0;
-  z-index: 2000;
-}
-
 .pie-legend span {
   text-align: center;
   height: 20px;
@@ -286,37 +304,10 @@ nav li:hover {
   font-weight: bold;
   color: #FFF;
   text-shadow:
-1px 1px 3px #000,
-1px 1px 3px #000,
-1px 1px 3px #000,
- 1px 1px 3px #000;
-}
-
-.pie-legend {
-  list-style: none;
-
-}
-
-.saved-text {
-  text-align: center;
-  width: 1000px;
-  font-size: 2em;
-}
-
-.tooltip {
-  display: inline;
-  position: below;
-}
-
-.tooltip:hover:before{
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 6px 0 6px;
-    bottom: -100px;
-    content: "";
-    left: 0%;
-    position: absolute;
-    z-index: 99;
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000;
 }
 
 #current {
