@@ -164,19 +164,31 @@ function displayRemainingIncome(event) {
   percentageSavingsForm = document.createElement('form');
   percentageSavingsLabel = document.createElement('label');
   percentageSavingsLabel.setAttribute('name', 'userPercentage');
+  percentageSavingsLabel.setAttribute('class', 'percentage-savings');
   percentageSavingsLabel.textContent = 'Enter a Percentage to Save:';
   percentageSavingsInput = document.createElement('input');
   percentageSavingsInput.setAttribute('type', 'text');
   percentageSavingsInput.setAttribute('name', 'userPercentage');
+  percentageSavingsInput.setAttribute('class', 'percentage-savings-form');
   percentageSavingsButton = document.createElement('button');
   percentageSavingsButton.setAttribute('type', 'submit');
   percentageSavingsButton.setAttribute('class', 'savings-button-color');
+  percentageSavingsButton.setAttribute('class', 'percentage-savings-button');
   percentageSavingsButton.textContent = 'Save Amount';
-  savingsIncomeEventSection.appendChild(percentageSavingsForm);
-  percentageSavingsForm.appendChild(percentageSavingsLabel);
-  percentageSavingsForm.appendChild(percentageSavingsInput);
-  percentageSavingsForm.appendChild(percentageSavingsButton);
-  percentageSavingsForm.addEventListener('submit', collectPercentageData);
+  if (document.getElementsByClassName('percentage-savings-form')[0]) {
+    percentageHeadingsSection.innerHTML = '';
+    savingsIncomeEventSection.appendChild(percentageSavingsForm);
+    percentageSavingsForm.appendChild(percentageSavingsLabel);
+    percentageSavingsForm.appendChild(percentageSavingsInput);
+    percentageSavingsForm.appendChild(percentageSavingsButton);
+    percentageSavingsForm.addEventListener('submit', collectPercentageData);
+  } else {
+    savingsIncomeEventSection.appendChild(percentageSavingsForm);
+    percentageSavingsForm.appendChild(percentageSavingsLabel);
+    percentageSavingsForm.appendChild(percentageSavingsInput);
+    percentageSavingsForm.appendChild(percentageSavingsButton);
+    percentageSavingsForm.addEventListener('submit', collectPercentageData);
+  };
 
 }
 
