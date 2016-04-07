@@ -1,7 +1,8 @@
 body {
   width: 1000px;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 10px;
+  margin-bottom: 50px;
   font-family: 'PT Sans', sans-serif;
   background: #403B2C;
 }
