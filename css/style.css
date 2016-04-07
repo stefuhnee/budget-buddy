@@ -190,7 +190,8 @@ main > section {
 .tools {
   position: relative;
   z-index: 50;
-  text-align: center;
+  text-align: left;
+  padding-right: 35px;
 }
 
 .cannoli {
@@ -226,6 +227,8 @@ main > section {
 .fixlist {
   display: block;
   width: 1000px;
+  postion: relative;
+  right: 50px;
 }
 
 .pie-legend {
@@ -246,6 +249,12 @@ main > section {
 
 .fixlist img:hover {
   opacity: 1;
+}
+
+.grow:hover {
+          -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .income-input input {
@@ -316,6 +325,15 @@ main > section {
     1px 1px 3px #000;
 }
 
+#budget-to-savings-button {
+text-align: center;
+}
+
+#savings-plan-button {
+  background-color: #F28805;
+  border-radius: 15px;
+}
+
 #current {
   background-color: #FFEBAF;
   color: #000;
@@ -330,6 +348,7 @@ main > section {
 #chart-legend-location {
   display: inline-block;
   margin-left: 50px;
+  margin-bottom: 50px;
 
 }
 
