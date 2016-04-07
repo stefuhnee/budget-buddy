@@ -8,3 +8,7 @@ if (document.getElementById('savings-income-event-section')) {
   savingsForm.addEventListener('submit', collectSavingsData);
 
 }
+
+if (document.getElementById('budget-to-savings-button')) {
+  budgetToSavingsButton.addEventListener('click', )
+}
