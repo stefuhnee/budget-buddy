@@ -164,6 +164,7 @@ main > section {
 }
 
 .savings-button-color {
+  display: inline-block;
   background-color: #F2E105;
 }
 
