@@ -12,11 +12,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 960px;
+  width: 1000px;
   min-height: 500px;
   background-color: #FFEBAF;
   z-index: 20;
-  padding: 20px;
+  /*padding: 20px;*/
   border-right: 3px solid #908563;
   border-bottom: 3px solid #908563;
 }
@@ -85,9 +85,9 @@ button {
 }
 
 nav ul {
-  width: 1000px;
+  width: 1005px;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 nav li {
@@ -175,7 +175,12 @@ main > section {
 }
 
 .savings-buttons {
-  
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  bottom: 50px;
 }
 
 .home-tab {
@@ -201,8 +206,7 @@ main > section {
 .tools {
   position: relative;
   z-index: 50;
-  text-align: left;
-  padding-right: 35px;
+  width: 1000px;
 }
 
 .cannoli {
@@ -211,6 +215,7 @@ main > section {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .cannoli .stefanie, .cannoli .vic {
@@ -238,8 +243,10 @@ main > section {
 .fixlist {
   display: block;
   width: 1000px;
-  postion: relative;
-  right: 50px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50px;
 }
 
 .pie-legend {
@@ -267,7 +274,7 @@ main > section {
 
 .fixlist li {
   display: inline;
-  width: 900px;
+  width: 1000px;
 }
 
 .fixlist img {
@@ -355,6 +362,7 @@ main > section {
    flex-wrap: wrap;
    justify-content: space-around;
    text-align: center;
+   width: 1000px;
 }
 
 
