@@ -15,7 +15,7 @@
         <ul>
           <a href= "index.html"><li class="home-tab">HOME</li></a>
           <a href= "budget.html"><li class="budget-tab">MY BUDGET</li></a>
-          <a href= "savings.html"><li class="savings-tab" id="current">SAVINGS</li></a>
+          <a href= "savings.html"><li class="current savings-tab">SAVINGS</li></a>
           <a href= "cannoli.html"><li class="aboutus-tab">ABOUT US</li></a>
           <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
         </ul>
@@ -40,7 +40,7 @@
           <input type="number" name="howMuch" class="insert" id="need" required placeholder="Enter a number">
         </article>
 
-        <article>
+        <article class="add">
           <label name="addMoney">Add money to savings</label>
           <input type="number" name="addMoney" class="insert" id="addMoney" required placeholder="Enter a number">
         </article>
@@ -49,13 +49,15 @@
 
         </section>
       </form>
-      <button type="submit" form="savingsForm"id="submit" class="savings-button-color"value="submit">Savings Progress</button>
-      <button id="clear" class="savings-button-color">Start A New Goal</button>
-      <section id="savingsData">
-      </section>
-      <article id="progress-holder">
-        <figure id="progress">
-        </figure>
+      <article class="savings-buttons">
+        <button type="submit" form="savingsForm"id="submit" class="savings-button-color"value="submit">Savings Progress</button>
+        <button id="clear" class="savings-button-color">Start A New Goal</button>
+        <article id="savingsData">
+        </section>
+        <article id="progress-holder">
+          <figure id="progress">
+          </figure>
+        </article>
       </article>
     </main>
     <script src="js/data.js"></script>

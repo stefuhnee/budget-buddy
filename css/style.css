@@ -12,11 +12,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 960px;
+  width: 1000px;
   min-height: 500px;
   background-color: #FFEBAF;
   z-index: 20;
-  padding: 20px;
+  /*padding: 20px;*/
   border-right: 3px solid #908563;
   border-bottom: 3px solid #908563;
 }
@@ -86,9 +86,9 @@ button {
 }
 
 nav ul {
-  width: 1000px;
+  width: 1005px;
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 nav li {
@@ -107,7 +107,7 @@ nav li {
     border-left: 20px solid #FFEBAF;
     border-right: 20px solid #FFEBAF;
     border-top: 20px solid #FFEBAF;
-    z-index: -1000;
+    z-index: -10;
 }
 
 nav li:hover {
@@ -175,31 +175,39 @@ main > section {
   color: white;
 }
 
+.savings-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+}
+
 .home-tab {
-          background-color: #F20505;
+  background-color: #F20505;
 }
 
 .budget-tab {
-          background-color: #F28805;
+  background-color: #F28805;
 }
 
 .savings-tab {
-          background-color: #F2E105;
+  background-color: #F2E105;
 }
 
 .aboutus-tab {
-          background-color: #50F205;
+  background-color: #50F205;
 }
 
 .resources-tab {
-          background-color: #7C05F2;
+  background-color: #7C05F2;
 }
 
 .tools {
   position: relative;
   z-index: 50;
-  text-align: left;
-  padding-right: 0px;
+  width: 1000px;
 }
 
 .cannoli {
@@ -208,6 +216,7 @@ main > section {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .cannoli .stefanie, .cannoli .vic {
@@ -229,17 +238,16 @@ main > section {
   display: inline;
   left: 0;
   top: 0;
-  z-index: 2000;
+  z-index: 100;
 }
 
 .fixlist {
   display: block;
-  width: inherit;
-  right: 0px;
-  padding-top: 15px;
-  padding-left: 60px;
-  border: 0px;
-  margin: 0px;
+  width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50px;
 }
 
 .pie-legend {
@@ -348,14 +356,29 @@ main > section {
     1px 1px 3px #000;
 }
 
-#savingsForm {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   text-align: center;
+.current {
+  background-color: #FFEBAF;
+  color: #000;
+  text-shadow: none;
+  border-bottom: 3px solid #FFEBAF;
+  position: relative;
+  z-index: 50;
 }
 
+.home-tab.current {
+    border-bottom: none;
+    text-shadow: none;
+    z-index: -10;
+}
+
+
+.current:hover {
+  text-shadow: none;
+}
+
+.add {
+flex-basis: 100%;
+}
 
 #budget-form {
  display: flex;
@@ -373,12 +396,6 @@ text-align: center;
   background-color: #403B2C;
   border-radius: 15px;
   color: white;
-}
-
-#current {
-  background-color: #FFEBAF;
-  color: #000;
-  text-shadow: none;
 }
 
 #canvas-section {
@@ -418,11 +435,6 @@ text-align: center;
   margin-bottom: 20px;
 }
 
-#savingsForm {
-  width: 100%;
-  margin: auto;
-}
-
 #newGoal {
   display: inline;
   text-align: center;
@@ -438,10 +450,19 @@ text-align: center;
 }
 
 #savingsForm {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  width: 900px;
+  padding-top: 10px;
+  bottom: 50px;
+  margin: auto;
   background-color: rgba(118, 108, 78, .5);
   border: 1px solid #999;
   border: inset 1px solid #333;
-  padding: 10px;
   border-radius: 15px;
 }
 
