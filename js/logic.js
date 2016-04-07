@@ -7,9 +7,7 @@ function clearLocalStorage() {
   section.removeChild(section.childNodes[0]);
   updateProgress(0);
   addMoneyInput.setAttribute('value', '');
-  userPercentageValue = 0;
-  // var percentageInput = document.getElementById('percentage-savings-form');
-  // percentageInput.removeChild(percentageSavingsForm.childNodes[0]);
+  var percentageForm = document.getElementById('savings-income-event-section');
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting
