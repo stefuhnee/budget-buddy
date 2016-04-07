@@ -1,7 +1,8 @@
 function clearLocalStorage() {
+  event.preventDefault();
   localStorage.clear();
-  howMuch = 0;
-  addMoney = 0;
+  var form = document.getElementById('savingsForm');
+  form.reset();
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting

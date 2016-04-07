@@ -4,8 +4,6 @@ if (document.getElementById('budget-form')) {
 }
 if (document.getElementById('savings-income-event-section')) {
   savingsIncomeEvent.addEventListener('click', displayRemainingIncome);
-  savingsForm.addEventListener('submit', collectSavingsData);
-}
-if (document.getElementById('savings-clear-event-section')){
   clearButton.addEventListener('click', clearLocalStorage);
+  savingsForm.addEventListener('submit', collectSavingsData);
 }
