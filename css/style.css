@@ -322,6 +322,15 @@ main > section {
     1px 1px 3px #000;
 }
 
+#budget-to-savings-button {
+text-align: center;
+}
+
+#savings-plan-button {
+  background-color: #F28805;
+  border-radius: 15px;
+}
+
 #current {
   background-color: #FFEBAF;
   color: #000;
@@ -336,6 +345,7 @@ main > section {
 #chart-legend-location {
   display: inline-block;
   margin-left: 50px;
+  margin-bottom: 50px;
 
 }
 
