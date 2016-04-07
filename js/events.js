@@ -6,9 +6,4 @@ if (document.getElementById('savings-income-event-section')) {
   savingsIncomeEvent.addEventListener('click', displayRemainingIncome);
   clearButton.addEventListener('click', clearLocalStorage);
   savingsForm.addEventListener('submit', collectSavingsData);
-
-}
-
-if (document.getElementById('budget-to-savings-button')) {
-  budgetToSavingsButton.addEventListener('click', )
 }
