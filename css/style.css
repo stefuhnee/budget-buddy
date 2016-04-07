@@ -22,7 +22,8 @@ main {
 }
 
 header {
-  width: 1400px;
+  width: 1000px;
+  margin: auto;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -126,7 +127,7 @@ main > section {
   font-size: 5.2em;
   background-color: #766c4e;
   border: 2px solid black;
-  width: 100%;
+  width: 1200px;
   position: relative;
   left: -200px;
   color: #fff;
