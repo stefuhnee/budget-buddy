@@ -356,34 +356,6 @@ main > section {
     1px 1px 3px #000;
 }
 
-#savingsForm {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   justify-content: space-around;
-   text-align: center;
-   width: 1000px;
-}
-
-
-#budget-form {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-around;
- text-align: center;
-}
-
-#budget-to-savings-button {
-text-align: center;
-}
-
-#savings-plan-button {
-  background-color: #403B2C;
-  border-radius: 15px;
-  color: white;
-}
-
 .current {
   background-color: #FFEBAF;
   color: #000;
@@ -402,6 +374,28 @@ text-align: center;
 
 .current:hover {
   text-shadow: none;
+}
+
+.add {
+flex-basis: 100%;
+}
+
+#budget-form {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ text-align: center;
+}
+
+#budget-to-savings-button {
+text-align: center;
+}
+
+#savings-plan-button {
+  background-color: #403B2C;
+  border-radius: 15px;
+  color: white;
 }
 
 #canvas-section {
@@ -441,11 +435,6 @@ text-align: center;
   margin-bottom: 20px;
 }
 
-#savingsForm {
-  width: 100%;
-  margin: auto;
-}
-
 #newGoal {
   display: inline;
   text-align: center;
@@ -461,10 +450,19 @@ text-align: center;
 }
 
 #savingsForm {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  width: 900px;
+  padding-top: 10px;
+  bottom: 50px;
+  margin: auto;
   background-color: rgba(118, 108, 78, .5);
   border: 1px solid #999;
   border: inset 1px solid #333;
-  padding: 10px;
   border-radius: 15px;
 }
 
