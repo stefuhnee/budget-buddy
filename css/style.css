@@ -59,6 +59,12 @@ label {
   font-family: 'PT Sans', sans-serif;
   display: block;
   font-weight: lighter;
+  color: #fff;
+  text-shadow:
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;
 }
 
 input {
