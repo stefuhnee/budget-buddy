@@ -1,31 +1,103 @@
-var howMuch;
-var addMoney;
-var savingsArray = [];
-var savingsRemaining;
-var currentSavings = 0;
-var incomeRemaining;
-var savingsData;
-var monthlyIncome = JSON.parse(localStorage.getItem('Monthly Income'));
-var fullBudget = JSON.parse(localStorage.getItem('Budget Data'));
-var progress = document.getElementById('progress');
-var savingsForm = document.getElementById('savingsForm');
-var savingsIncomeEvent = document.getElementById('savings-income-event');
-var savingsIncomeEventSection = document.getElementById('savings-income-event-section');
-var savingsHeadingSection = document.getElementById('savings-heading-section');
-var incomeRemainingHeading;
-var incomeRemaining;
-var percentageSavingsFieldset;
-var percentageSavingsLabel;
-var percentageSavingsInput;
-var percentageSavingsButton;
-var userPercentageValue;
-var savingsAmount;
-var addMoneyInput = document.getElementById('addMoney');
+function clearLocalStorage() {
+  localStorage.clear();
+}
 
-console.log('javascript is working dummy');
+// uses inputted monthly income value to calculate remaining income after budgeting
+function monthlyIncomeRemaining() {
+  fullBudget = [];
+  fullBudget.push(rentExpense, foodExpense, insuranceExpense, utilitiesExpense, loansExpense, transportationExpense);
+  incomeRemaining = monthlyIncome;
+  for (var i = 0; i < fullBudget.length; i++) {
+    incomeRemaining -= fullBudget[i].expense;
+  }
+  console.log('Monthly income remaining ' + incomeRemaining);
+  return incomeRemaining;
+};
 
-var clearButton = document.getElementById('clear');
-var savingsForm = document.getElementById('savingsForm');
+// Event handler -- assigns value to each object according to user input
+function collectBudgetData(event){
+  event.preventDefault();
+
+  // If there is a pie chart already on the page, clear it. If not, add it.
+  if (document.getElementsByClassName('canvas-pie-chart')[0]){
+    var canvasSection = document.getElementById('canvas-section');
+    canvasSection.removeChild(document.getElementsByTagName('canvas')[0]);
+    var canvasEl = document.createElement('canvas');
+    canvasSection.appendChild(canvasEl);
+  } else {
+    var canvasEl = document.createElement('canvas');
+    var canvasSection = document.getElementById('canvas-section');
+    canvasSection.appendChild(canvasEl);
+  }
+
+  canvasEl.setAttribute('class', 'canvas-pie-chart');
+  canvasEl.setAttribute('width', '400px');
+  canvasEl.setAttribute('height', '400px');
+  context = canvasEl.getContext('2d');
+
+  // Takes input and updates expense property of objects.
+  monthlyIncome = parseInt(event.target.enterIncome.value);
+  rentExpense.expense = parseInt(event.target.rentMortgage.value);
+  foodExpense.expense = parseInt(event.target.foodGroceries.value);
+  insuranceExpense.expense = parseInt(event.target.insurance.value);
+  utilitiesExpense.expense = parseInt(event.target.utilities.value);
+  loansExpense.expense = parseInt(event.target.loansCcDebt.value);
+  transportationExpense.expense = parseInt(event.target.transportation.value);
+
+  var incomeRemaining = monthlyIncomeRemaining();
+
+  var data = [
+    {
+      value: rentExpense.expense,
+      color: '#7C05F2',
+      highlight: '#46F2E5',
+      label: 'Rent'
+    },
+    {
+      value: foodExpense.expense,
+      color: '#50F205',
+      highlight: '#46F2E5',
+      label: 'Food'
+    },
+    {
+      value: insuranceExpense.expense,
+      color: '#F2E105',
+      highlight: '#46F2E5',
+      label: 'Insurance'
+    },
+    {
+      value: utilitiesExpense.expense,
+      color: '#F28805',
+      highlight: '#46F2E5',
+      label: 'Utilities'
+    },
+    {
+      value: loansExpense.expense,
+      color: '#F20505',
+      highlight: '#46F2E5',
+      label: 'Loans'
+    },
+    {
+      value: transportationExpense.expense,
+      color: '#5C92F2',
+      highlight: '#46F2E5',
+      label: 'Transportation'
+    },
+    {
+      value: incomeRemaining,
+      color: '#F221AD',
+      highlight: '#46F2E5',
+      label: 'Remaining Income'
+    }
+  ];
+
+  // Storing objects and monthly income in local storage
+  localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
+  localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
+
+  var myPieChart = new Chart(context).Pie(data);
+  document.getElementById('chart-legend-location').innerHTML = myPieChart.generateLegend();
+}
 
 // Collects user info from savings form (event handler)
 function collectSavingsData(event){
@@ -78,10 +150,8 @@ function displayRemainingIncome(event) {
   console.log('incomeRemaining' + incomeRemaining);
   incomeRemainingHeading = document.createElement('h2');
   incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
-  console.log('income from local storage ' + incomeRemaining);
-  incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
+  incomeRemainingHeading.textContent = 'You have $' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
   savingsHeadingSection.appendChild(incomeRemainingHeading);
-  percentageSavingsFieldset = document.createElement('fieldset');
   percentageSavingsForm = document.createElement('form');
   percentageSavingsLabel = document.createElement('label');
   percentageSavingsLabel.setAttribute('name', 'userPercentage');
@@ -94,11 +164,11 @@ function displayRemainingIncome(event) {
   percentageSavingsButton.setAttribute('class', 'savings-button-color');
   percentageSavingsButton.textContent = 'Save Amount';
   savingsIncomeEventSection.appendChild(percentageSavingsForm);
-  percentageSavingsForm.appendChild(percentageSavingsFieldset);
-  percentageSavingsFieldset.appendChild(percentageSavingsLabel);
-  percentageSavingsFieldset.appendChild(percentageSavingsInput);
+  percentageSavingsForm.appendChild(percentageSavingsLabel);
+  percentageSavingsForm.appendChild(percentageSavingsInput);
   percentageSavingsForm.appendChild(percentageSavingsButton);
   percentageSavingsForm.addEventListener('submit', collectPercentageData);
+
 }
 
 function collectPercentageData(event) {
@@ -115,15 +185,3 @@ function collectPercentageData(event) {
 function updateProgress(perc) {
   progress.style.width = perc + '%';
 };
-
-//button to start a new goal, clear savings from local storage
-var clearLocalStorage = function(event){
-  event.preventDefault();
-  console.log('cleared data');
-  localStorage.clear();
-};
-
-// Event listener
-savingsIncomeEvent.addEventListener('click', displayRemainingIncome);
-clearButton.addEventListener('click', clearLocalStorage);
-savingsForm.addEventListener('submit', collectSavingsData);

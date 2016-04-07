@@ -1,17 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BUDGET BUDDY</title>
-    <link href="css/frontpage.css" type="text/css" rel="stylesheet">
+    <title>
+      BUDGET BUDDY
+    </title>
+    <link href="css/normalize.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans|Nunito:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <section>Budget Buddy</section>
+      <img src="img/logo.png" class="title-image"/>
+      <nav>
+        <ul>
+          <a href= "index.html"><li class="home-tab" id="current">HOME</li></a>
+          <a href= "budget.html"><li class="budget-tab">MY BUDGET</li></a>
+          <a href= "savings.html"><li class="savings-tab">SAVINGS</li></a>
+          <a href= "cannoli.html"><li class="aboutus-tab">ABOUT US</li></a>
+          <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
+        </ul>
+      </nav>
     </header>
-    <main id="money">
-      <a href="home.html"><img src="img/frontpage.jpg"></a>
+    <main>
+      <img src="img/folderline.png" class="folder-line" />
+      <div class="nav-divider"></div>
+      <article class="post-it">
+        <img src="img/postit.png" class="animated hinge"/>
+      </article>
     </main>
-    <footer>
-    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>
