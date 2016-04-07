@@ -49,14 +49,6 @@ button {
   outline: none;
 }
 
-form {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-around;
- text-align: center;
-}
-
 label {
   text-align:center;
   font-family: 'PT Sans', sans-serif;
@@ -239,6 +231,25 @@ main > section {
   list-style: none;
 }
 
+.grow:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.percentage-savings {
+  margin-top: 10px;
+}
+
+.percentage-savings-form {
+  margin-right: 10px;
+}
+
+.percentage-savings-form, .percentage-savings-button {
+  position: relative;
+  bottom: 20px;
+}
+
 .fixlist li {
   display: inline;
   width: 900px;
@@ -253,12 +264,6 @@ main > section {
 
 .fixlist img:hover {
   opacity: 1;
-}
-
-.grow:hover {
-          -webkit-transform: scale(1.5);
-          -ms-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .income-input input {
@@ -327,6 +332,23 @@ main > section {
     1px 1px 3px #000,
     1px 1px 3px #000,
     1px 1px 3px #000;
+}
+
+#savingsForm {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   text-align: center;
+}
+
+
+#budget-form {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ text-align: center;
 }
 
 #budget-to-savings-button {
