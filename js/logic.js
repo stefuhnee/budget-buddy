@@ -144,8 +144,8 @@ function collectSavingsData(event){
 // Progress bar
   if (currentSavings <= howMuch) {
     updateProgress((currentSavings / howMuch) * 100);
-  }else if (currentSavings >= howMuch) {
-    updateProgress (100);
+  }else {
+    updateProgress(100);
   };
 }
 
