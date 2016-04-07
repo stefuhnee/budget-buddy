@@ -65,25 +65,6 @@ form {
   flex-basis: 100%
 }
 
-/*legend {
-  border: 0;
-  margin-top: 75px;
-  font-size: 24px;
-  width: 900px;
-  font-family: 'Nunito', sans-serif;
-}*/
-
-/*fieldset {
-  border: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  margin-bottom: 20px;
-  }*/
-
 label {
   text-align:center;
   font-family: 'PT Sans', sans-serif;
@@ -212,10 +193,12 @@ nav li:hover {
 }
 
 .cannoli img {
-  display: inline;
-  height: 240px;
+  height: 150px;
   float: left;
-  margin-bottom: 140px;
+}
+
+.cannoli img:hover {
+  transform: scale(1.3);
 }
 
 .cannoli {
@@ -227,16 +210,51 @@ nav li:hover {
 }
 
 .cannoli article {
-  width: 45%;
+  width: 100%;
   text-align: left;
-  height: 320px;
   margin-bottom: 20px;
+  height: 130px;
+  border: 1px solid black;
+}
+
+.cannoli .stefanie, .cannoli .vic {
+  padding-right: 10px;
+}
+
+.cannoli .jeff, .cannoli .dan {
+  padding-left: 10px;
+}
+
+.cannoli .jeff img, .cannoli .dan img {
+  float: right;
 }
 
 .cannoli p {
-display: inline;
-margin-left: 5px;
-font-size: .8em;
+  width: 230px;
+  height: 200px;
+  margin-left: 5px;
+  font-size: 1em;
+  display: inline;
+}
+
+.cannoli .stefanie p {
+  position: relative;
+  top: 25px;
+}
+
+.cannoli .jeff p {
+  position: relative;
+  top: 30px;
+}
+
+.cannoli .vic p {
+  position: relative;
+  top: 25px;
+}
+
+.cannoli .dan p {
+  position: relative;
+  top: 15px;
 }
 
 .post-it {
