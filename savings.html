@@ -28,7 +28,7 @@
         </section>
       </section>
 
-      <form id="savingsForm">
+      <form method="get" id="savingsForm">
 
         <article>
           <label name="savingsFor">What are you saving for?</label>
@@ -46,11 +46,11 @@
         </article>
 
         <section id="newGoal">
-          <button type="submit"id="submit" class="savings-button-color">Savings Progress</button>
-          <button id="clear" class="savings-button-color">Start A New Goal</button>
+
         </section>
       </form>
-
+      <button type="submit" form="savingsForm"id="submit" class="savings-button-color"value="submit">Savings Progress</button>
+      <button id="clear" class="savings-button-color">Start A New Goal</button>
       <section id="savingsData">
       </section>
       <article id="progress-holder">
