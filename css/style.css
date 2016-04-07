@@ -169,23 +169,23 @@ main > section {
 }
 
 .home-tab {
-          background-color: #F20505;
+          background-color: rgba(64, 59, 44, .5);
 }
 
 .budget-tab {
-          background-color: #F28805;
+          background-color: rgba(118, 108, 78, .5);
 }
 
 .savings-tab {
-          background-color: #F2E105;
+          background-color: rgba(118, 108, 78, .5);
 }
 
 .aboutus-tab {
-          background-color: #50F205;
+          background-color: rgba(118, 108, 78, .5);
 }
 
 .resources-tab {
-          background-color: #7C05F2;
+          background-color: rgba(118, 108, 78, .5);;
 }
 
 .tools {
