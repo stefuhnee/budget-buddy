@@ -388,9 +388,19 @@ text-align: center;
 }
 
 #budget-form {
-  background-color: white;
+  background-color: rgba(118, 108, 78, .5);
   border: 1px solid #999;
   border: inset 1px solid #333;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+#savingsForm {
+  background-color: rgba(118, 108, 78, .5);
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 /* From animate.css: */
