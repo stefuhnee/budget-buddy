@@ -5,6 +5,7 @@ function clearLocalStorage() {
   form.reset();
   var section = document.getElementById('savingsData');
   section.removeChild(section.childNodes[0]);
+  updateProgress(0);
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting
@@ -143,6 +144,8 @@ function collectSavingsData(event){
 // Progress bar
   if (currentSavings <= howMuch) {
     updateProgress((currentSavings / howMuch) * 100);
+  }else if (currentSavings >= howMuch) {
+    updateProgress (100);
   };
 }
 
