@@ -49,14 +49,6 @@ button {
   outline: none;
 }
 
-form {
- display: flex;
- flex-direction: row;
- flex-wrap: wrap;
- justify-content: space-around;
- text-align: center;
-}
-
 label {
   text-align:center;
   font-family: 'PT Sans', sans-serif;
@@ -323,6 +315,23 @@ main > section {
     1px 1px 3px #000,
     1px 1px 3px #000,
     1px 1px 3px #000;
+}
+
+#savingsForm {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   text-align: center;
+}
+
+
+#budget-form {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ text-align: center;
 }
 
 #budget-to-savings-button {
