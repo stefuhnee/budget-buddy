@@ -125,6 +125,7 @@ function collectSavingsData(event){
   // Storing objects and monthly income in local storage
   localStorage.setItem('Total Savings Goal', JSON.stringify(howMuch));
   localStorage.setItem('Savings Remaining', JSON.stringify(savingsRemaining));
+  localStorage.setItem('Current Savings', JSON.stringify(currentSavings));
   var savingsRemaining = (howMuch - currentSavings);
   console.log('Savings remaining: ', savingsRemaining);
 
