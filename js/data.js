@@ -55,3 +55,12 @@ var insuranceExpense = new budgetExpense('insurance', 0);
 var utilitiesExpense = new budgetExpense('utilities', 0);
 var loansExpense = new budgetExpense('loans', 0);
 var transportationExpense = new budgetExpense('transportation', 0);
+
+var budgetToSavingsLocation = document.getElementById('budget-to-savings-button');
+var budgetToSavingsButton = budgetToSavingsButton.createElement('button');
+budgetToSavingsButton.textContent = 'Move to your savings';
+budgetToSavingsButton.appendChild(budgetToSavingsLocation);
+
+function moveFromBudgetToSavings(event){
+
+}
