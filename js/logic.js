@@ -1,5 +1,7 @@
 function clearLocalStorage() {
   localStorage.clear();
+  howMuch = 0;
+  addMoney = 0;
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting
