@@ -179,6 +179,9 @@ main > section {
   position: relative;
   z-index: 50;
   text-align: center;
+  padding-right: 35px;
+  /*margin-left: auto;
+  margin-right: auto;*/
 }
 
 .cannoli {
@@ -217,10 +220,12 @@ main > section {
   z-index: 2000;
 }
 
-.fixlist {
+/*.fixlist {
   display: block;
   width: 1000px;
-}
+  postion: relative;
+  right: 50px;
+}*/
 
 .pie-legend {
   list-style: none;
@@ -235,11 +240,17 @@ main > section {
   border: 1px solid black;
   height: 75px;
   opacity: 0.8;
-  margin: 30px 70px 10px 70px;
+  /*margin: 30px 70px 10px 70px;*/
 }
 
 .fixlist img:hover {
   opacity: 1;
+}
+
+.grow:hover {
+          -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .income-input input {
