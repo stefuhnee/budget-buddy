@@ -6,6 +6,7 @@ function clearLocalStorage() {
   var section = document.getElementById('savingsData');
   section.removeChild(section.childNodes[0]);
   updateProgress(0);
+  addMoneyInput.setAttribute('value', '');
 }
 
 // uses inputted monthly income value to calculate remaining income after budgeting
