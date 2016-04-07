@@ -12,15 +12,16 @@ body {
 }
 
 main {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 960px;
-    min-height: 400px;
-    background-color: #FFEBAF;
-    z-index: 20;
-    padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 960px;
+  min-height: 400px;
+  background-color: #FFEBAF;
+  z-index: 20;
+  padding: 20px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
 }
 
 header {
@@ -48,45 +49,56 @@ button, input, form, label, fieldset {
   font-family: inherit;
 }
 
-form {
-  text-align: center;
+button {
+  outline: none;
 }
 
+form {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ text-align: center;
+}
 
-legend {
+.income-input {
+  flex-basis: 100%
+}
+
+/*legend {
   border: 0;
   margin-top: 75px;
   font-size: 24px;
   width: 900px;
   font-family: 'Nunito', sans-serif;
-}
+}*/
 
-fieldset {
+/*fieldset {
   border: 0;
-  width: 900px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  }
+  }*/
 
 label {
   text-align:center;
   font-family: 'Nunito', sans-serif;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.income-input input {
+  margin-bottom: 50px;
 }
 
 input {
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  width: 300px;
   margin-bottom: 20px;
-  /*float: left;*/
-  /*margin-left: 80px;*/
+  width: 300px;
   border-radius: 5px;
   box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
 }
@@ -198,16 +210,11 @@ nav li:hover {
   width: 900px;
 }
 
-#current {
-  background-color: #FFEBAF;
-  color: #000;
-  text-shadow: none;
-}
-
 .cannoli img {
   display: inline;
-  height: 200px;
+  height: 240px;
   float: left;
+  margin-bottom: 140px;
 }
 
 .cannoli {
@@ -216,19 +223,19 @@ nav li:hover {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  position: relative;
 }
 
 .cannoli article {
-  flex-basis: 100%;
-  display: table;
-  height: 200px;
+  width: 45%;
+  text-align: left;
+  height: 320px;
+  margin-bottom: 20px;
 }
 
 .cannoli p {
-height: 200px;
-position: relative;
-top: 40px;
+display: inline;
+margin-left: 5px;
+font-size: .8em;
 }
 
 .post-it {
@@ -277,8 +284,26 @@ top: 40px;
   font-size: 2em;
 }
 
-.about-us-main {
-  text-align: center;
+.tooltip {
+  display: inline;
+  position: below;
+}
+
+.tooltip:hover:before{
+    border: solid;
+    border-color: #333 transparent;
+    border-width: 6px 6px 0 6px;
+    bottom: -100px;
+    content: "";
+    left: 0%;
+    position: absolute;
+    z-index: 99;
+}
+
+#current {
+  background-color: #FFEBAF;
+  color: #000;
+  text-shadow: none;
 }
 
 #canvas-section {
@@ -326,6 +351,7 @@ top: 40px;
   text-align: center;
   margin: auto;
 }
+
 /* From animate.css: */
 
 .animated.hinge {
@@ -405,26 +431,4 @@ top: 40px;
 .hinge {
   -webkit-animation-name: hinge;
   animation-name: hinge;
-}
-
-.tooltip {
-  display: inline;
-  position: below;
-}
-
-.tooltip:hover:before{
-    border: solid;
-    border-color: #333 transparent;
-    border-width: 6px 6px 0 6px;
-    bottom: -100px;
-    content: "";
-    left: 0%;
-    position: absolute;
-    z-index: 99;
-}
-
-.teamcannoli {
-  font-family: 'Nunito', sans-serif;
-  font-size: 50px;
-  flex-basis: 100%;
 }

@@ -13,10 +13,10 @@
       <img src="img/logo.png" class="title-image"/>
       <nav>
         <ul>
-          <a href= "home.html"><li class="home-tab">HOME</li></a>
+          <a href= "index.html"><li class="home-tab">HOME</li></a>
           <a href= "budget.html"><li class="budget-tab">MY BUDGET</li></a>
           <a href= "savings.html"><li class="savings-tab" id="current">SAVINGS</li></a>
-          <a href= "about-us.html"><li class="aboutus-tab">ABOUT US</li></a>
+          <a href= "cannoli.html"><li class="aboutus-tab">ABOUT US</li></a>
           <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
         </ul>
       </nav>
@@ -29,22 +29,26 @@
       </section>
 
       <form id="savingsForm">
-        <fieldset>
-          <legend class="savings-form-color">Savings</legend>
 
+        <article>
           <label name="savingsFor">What are you saving for?</label>
           <input type="text" name="savingsFor" class="insert" id="saving">
+        </article>
 
+        <article>
           <label name="howMuch">How much do you need to save?</label>
           <input type="number" name="howMuch" class="insert" id="need" required placeholder="Enter a number">
+        </article>
 
-          <label name="addMoney">Add More Money?</label>
+        <article>
+          <label name="addMoney">Add money to savings</label>
           <input type="number" name="addMoney" class="insert" id="addMoney" required placeholder="Enter a number">
+        </article>
 
-        </fieldset>
-        <button type="submit"id="submit" class="savings-button-color">Savings To Date</button>
-        <section id="newGoal">
-        <button id="clear" class="savings-button-color">Start A New Goal</button>
+        <section>
+          <button type="submit"id="submit" class="savings-button-color">Savings Progress</button>
+          <section id="newGoal">
+          <button id="clear" class="savings-button-color">Start A New Goal</button>
         </section>
       </form>
 
@@ -55,8 +59,8 @@
         </figure>
       </article>
     </main>
-    <!-- <script src="js/budget.js"></script> -->
-    <script src="js/app.js"></script>
-    <script src="js/savings.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>

@@ -11,10 +11,10 @@
         <img src="img/logo.png" class="title-image"/>
       <nav>
         <ul>
-          <a href= "home.html"><li class="home-tab">HOME</li></a>
+          <a href= "index.html"><li class="home-tab">HOME</li></a>
           <a href= "budget.html"><li class="budget-tab" id="current">MY BUDGET</li></a>
           <a href= "savings.html"><li class="savings-tab">SAVINGS</li></a>
-          <a href= "about-us.html"><li class="aboutus-tab">ABOUT US</li></a>
+          <a href= "cannoli.html"><li class="aboutus-tab">ABOUT US</li></a>
           <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
         </ul>
       </nav>
@@ -22,36 +22,46 @@
     <main>
         <section>
         <form id="form">
-          <fieldset  id="income">
-            <legend class="budget-form-color">Budget</legend>
-
-            <label name="enterIncome">Budget Income</label>
+          <!-- <fieldset  id="income"> -->
+          <article class="income-input">
+            <label name="enterIncome">Available Income</label>
             <input type="number" name="enterIncome" class="insert" id="income" required placeholder="Enter 0 or a number">
-          </fieldset>
+          </article>
+          <!-- </fieldset> -->
 
-          <fieldset id="expenses">
-            <legend class="budget-form-color">Budget Expenses</legend>
+          <!-- <fieldset id="expenses"> -->
+            <article>
+              <label name="rentMortgage">Rent/Mortgage</label>
+              <input type="number" name="rentMortgage" class="insert" id="rent" required placeholder="Enter 0 or a number">
+            </article>
 
-            <label name="rentMortgage">Rent/Mortgage</label>
-            <input type="number" name="rentMortgage" class="insert" id="rent" required placeholder="Enter 0 or a number">
+            <article>
+              <label name="foodGroceries">Food/Groceries</label>
+              <input type="number" name="foodGroceries" class="insert" id="food" required placeholder="Enter 0 or a number">
+            </article>
 
-            <label name="foodGroceries">Food/Groceries</label>
-            <input type="number" name="foodGroceries" class="insert" id="food" required placeholder="Enter 0 or a number">
+            <article>
+              <label name="insurance">Insurance</label>
+              <input type="number" name="insurance" class="insert" id="insure" required placeholder="Enter 0 or a number">
+            </article>
 
-            <label name="insurance">Insurance</label>
-            <input type="number" name="insurance" class="insert" id="insure" required placeholder="Enter 0 or a number">
-            <br>
-            <label name="utilities">Utilities</label>
-            <input type="number" name="utilities" class="insert" id="util" required placeholder="Enter 0 or a number">
+            <article>
+              <label name="utilities">Utilities</label>
+              <input type="number" name="utilities" class="insert" id="util" required placeholder="Enter 0 or a number">
+            </article>
 
-            <label name="loansCcDebt">Loans/Credit Cards/Debt</label>
-            <input type="number" name="loansCcDebt" class="insert" id="loan" required placeholder="Enter 0 or a number">
+            <article>
+              <label name="loansCcDebt">Loans/Credit Cards/Debt</label>
+              <input type="number" name="loansCcDebt" class="insert" id="loan" required placeholder="Enter 0 or a number">
+            </article>
 
-            <label name="transportation">Transportation</label>
-            <input type="number" name="transportation" class="insert" id="tran" required placeholder="Enter 0 or a number">
+            <article>
+              <label name="transportation">Transportation</label>
+              <input type="number" name="transportation" class="insert" id="tran" required placeholder="Enter 0 or a number">
+            </article>
 
 
-          </fieldset>
+          <!-- </fieldset> -->
             <button type="submit" id="submit" class="budget-button-color">Pie Chart</button>
         </form>
         <section>
@@ -62,9 +72,8 @@
         </section>
       </section>
     </main>
-    <script src="js/chart.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/budget.js"></script>
-
+    <script src="js/data.js"></script>
+    <script src="js/logic.js"></script>
+    <script src="js/events.js"></script>
   </body>
 </html>
