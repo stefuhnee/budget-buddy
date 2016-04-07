@@ -2,15 +2,25 @@ function clearLocalStorage() {
   localStorage.clear();
 }
 
+// uses inputted monthly income value to calculate remaining income after budgeting
+function monthlyIncomeRemaining() {
+  fullBudget = [];
+  fullBudget.push(rentExpense, foodExpense, insuranceExpense, utilitiesExpense, loansExpense, transportationExpense);
+  incomeRemaining = monthlyIncome;
+  for (var i = 0; i < fullBudget.length; i++) {
+    incomeRemaining -= fullBudget[i].expense;
+  }
+  console.log('Monthly income remaining ' + incomeRemaining);
+  return incomeRemaining;
+};
+
 // Event handler -- assigns value to each object according to user input
 function collectBudgetData(event){
   event.preventDefault();
 
   // If there is a pie chart already on the page, clear it. If not, add it.
   if (document.getElementsByClassName('canvas-pie-chart')[0]){
-    console.log('benton says');
     var canvasSection = document.getElementById('canvas-section');
-    console.log('remove child thing: ', document.getElementsByTagName('canvas')[0]);
     canvasSection.removeChild(document.getElementsByTagName('canvas')[0]);
     var canvasEl = document.createElement('canvas');
     canvasSection.appendChild(canvasEl);
@@ -25,7 +35,7 @@ function collectBudgetData(event){
   canvasEl.setAttribute('height', '400px');
   context = canvasEl.getContext('2d');
 
-  // Takes input and updates expense property of objects. Checks if input is NaN and changes it to 0 if not.
+  // Takes input and updates expense property of objects.
   monthlyIncome = parseInt(event.target.enterIncome.value);
   rentExpense.expense = parseInt(event.target.rentMortgage.value);
   foodExpense.expense = parseInt(event.target.foodGroceries.value);
@@ -34,49 +44,9 @@ function collectBudgetData(event){
   loansExpense.expense = parseInt(event.target.loansCcDebt.value);
   transportationExpense.expense = parseInt(event.target.transportation.value);
 
-  // Calculates remaining income for the month after submitting expenses
-  function monthlyIncomeRemaining() {
-    incomeRemaining = monthlyIncome;
-    for (var i = 0; i < fullBudget.length; i++) {
-      incomeRemaining -= fullBudget[i].expense;
-    }
-    console.log('Monthly income remaining ' + incomeRemaining);
-    return incomeRemaining;
-  }
-
-// Changes NaN (blank input) values to 0
-  function makeInputValid(target) {
-    if (typeof target !== 'number') {
-      target = 0;
-    }
-  }
-
-  // Storing objects and monthly income in local storage
-  localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
-  localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
-  localStorage.setItem('Monthly Income Remaining', JSON.stringify(monthlyIncomeRemaining()));
-
-  function PieChartData(){
-    this.allPieData = [];
-  }
-
-  PieChartData.prototype.pushData = function(pieData){
-    this.allPieData.push(pieData);
-  };
-
-  PieChartData.prototype.renderToCanvas = function(context){
-    new Chart(context).Pie(this.allPieData);
-  };
-
-  function PieData(label, value, color){
-    this.label = label;
-    this.value = value;
-    this.color = color;
-    this.highlight = '#fa7a7a';
-  }
+  var incomeRemaining = monthlyIncomeRemaining();
 
   var data = [
-
     {
       value: rentExpense.expense,
       color: '#7C05F2',
@@ -120,10 +90,13 @@ function collectBudgetData(event){
       label: 'Remaining Income'
     }
   ];
+
+  // Storing objects and monthly income in local storage
+  localStorage.setItem('Budget Data', JSON.stringify(fullBudget));
+  localStorage.setItem('Monthly Income', JSON.stringify(monthlyIncome));
+
   var myPieChart = new Chart(context).Pie(data);
   document.getElementById('chart-legend-location').innerHTML = myPieChart.generateLegend();
-  console.log(myPieChart.generateLegend());
-  monthlyIncomeRemaining();
 }
 
 // Collects user info from savings form (event handler)
@@ -177,10 +150,8 @@ function displayRemainingIncome(event) {
   console.log('incomeRemaining' + incomeRemaining);
   incomeRemainingHeading = document.createElement('h2');
   incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
-  console.log('income from local storage ' + incomeRemaining);
-  incomeRemainingHeading.textContent = 'You have ' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
+  incomeRemainingHeading.textContent = 'You have $' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
   savingsHeadingSection.appendChild(incomeRemainingHeading);
-  percentageSavingsFieldset = document.createElement('fieldset');
   percentageSavingsForm = document.createElement('form');
   percentageSavingsLabel = document.createElement('label');
   percentageSavingsLabel.setAttribute('name', 'userPercentage');
@@ -193,11 +164,11 @@ function displayRemainingIncome(event) {
   percentageSavingsButton.setAttribute('class', 'savings-button-color');
   percentageSavingsButton.textContent = 'Save Amount';
   savingsIncomeEventSection.appendChild(percentageSavingsForm);
-  percentageSavingsForm.appendChild(percentageSavingsFieldset);
-  percentageSavingsFieldset.appendChild(percentageSavingsLabel);
-  percentageSavingsFieldset.appendChild(percentageSavingsInput);
+  percentageSavingsForm.appendChild(percentageSavingsLabel);
+  percentageSavingsForm.appendChild(percentageSavingsInput);
   percentageSavingsForm.appendChild(percentageSavingsButton);
   percentageSavingsForm.addEventListener('submit', collectPercentageData);
+
 }
 
 function collectPercentageData(event) {
