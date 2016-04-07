@@ -190,7 +190,8 @@ main > section {
 .tools {
   position: relative;
   z-index: 50;
-  text-align: center;
+  text-align: left;
+  padding-right: 35px;
 }
 
 .cannoli {
@@ -232,6 +233,8 @@ main > section {
 .fixlist {
   display: block;
   width: 1000px;
+  postion: relative;
+  right: 50px;
 }
 
 .pie-legend {
@@ -252,6 +255,12 @@ main > section {
 
 .fixlist img:hover {
   opacity: 1;
+}
+
+.grow:hover {
+          -webkit-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .income-input input {
