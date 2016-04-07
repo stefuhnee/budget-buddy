@@ -227,6 +227,25 @@ main > section {
   list-style: none;
 }
 
+.grow:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.percentage-savings {
+  margin-top: 10px;
+}
+
+.percentage-savings-form {
+  margin-right: 10px;
+}
+
+.percentage-savings-form, .percentage-savings-button {
+  position: relative;
+  bottom: 20px;
+}
+
 .fixlist li {
   display: inline;
   width: 900px;
@@ -241,12 +260,6 @@ main > section {
 
 .fixlist img:hover {
   opacity: 1;
-}
-
-.grow:hover {
-          -webkit-transform: scale(1.5);
-          -ms-transform: scale(1.5);
-          transform: scale(1.5);
 }
 
 .income-input input {
