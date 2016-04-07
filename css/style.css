@@ -342,6 +342,7 @@ text-align: center;
 
 #canvas-section {
   display: inline-block;;
+  margin-top: 20px;
 
 }
 
@@ -402,6 +403,7 @@ text-align: center;
   padding: 10px;
   border-radius: 15px;
 }
+
 
 /* From animate.css: */
 
