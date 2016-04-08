@@ -425,7 +425,7 @@ text-align: center;
   background:black;
   -webkit-transition:width 500ms;
   position: relative;
-  bottom: 16px;
+  bottom: 0;
   right: 40px;
 }
 
