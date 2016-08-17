@@ -1,0 +1,62 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+  background: #403B2C;
+}
+
+main {
+  background-color: #FFEBAF;
+  border-right: 3px solid #908563;
+  border-bottom: 3px solid #908563;
+}
+
+h2 {
+  padding: 10px 0px 10px 0px;
+  font-weight: normal;
+  font-size: 19px;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input, form, label, fieldset {
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+label {
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow:
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;
+}
+
+input {
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+}
+
+button {
+  border-radius: 10px;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #403B2C;
+  color: white;
+}
+
+nav li {
+    font-family: 'PT Sans', sans-serif;
+    color: #FFF;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 62px;
+    border-left: 20px solid #FFEBAF;
+    border-right: 20px solid #FFEBAF;
+    border-top: 20px solid #FFEBAF;
+}
