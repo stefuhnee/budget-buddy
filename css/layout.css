@@ -1,0 +1,441 @@
+button, input, form, label, fieldset {
+  font-family: inherit;
+}
+
+button {
+  outline: none;
+}
+
+label {
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+  display: block;
+  font-weight: lighter;
+  color: #fff;
+  text-shadow:
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;
+}
+
+input {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px 0px rgba(0, 0, 0, 0.35);
+}
+
+button {
+  border-radius: 10px;
+  margin-top: 25px;
+  font-family: 'PT Sans', sans-serif;
+  background-color: #403B2C;
+  color: white;
+}
+
+nav ul {
+  width: 1005px;
+  display:flex;
+  justify-content: space-between;
+}
+
+nav li {
+    font-family: 'PT Sans', sans-serif;
+    color: #FFF;
+    display: table-cell;
+    position: relative;
+    top: 20px;
+    right: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 62px;
+    height: 40px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 20px solid #FFEBAF;
+    border-right: 20px solid #FFEBAF;
+    border-top: 20px solid #FFEBAF;
+    z-index: -10;
+}
+
+nav li:hover {
+  text-shadow:
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000;
+}
+
+main > section {
+  margin-top: 20px;
+}
+
+.wrapper {
+    position: relative;
+    width:100%s;
+    height:100%;
+    margin: 0 auto;
+    padding: 1em 1em 1em 3em;
+    /*padding: 0 auto;*/
+
+}
+.title {
+  font-family: Quicksand;
+  font-size: 5.2em;
+  background-color: #766c4e;
+  border: 2px solid black;
+  width: 100%;
+  /*position: relative;*/
+  /*left: -100px;*/
+  color: #fff;
+  height: 110px;
+  text-shadow:
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000;
+  margin:0 auto;
+}
+
+.not-index-main {
+  border: 3px solid #908563;
+}
+
+.income-input {
+  flex-basis: 100%
+}
+
+.nav-divider {
+  position: absolute;
+  height: 1px;
+  top: 0;
+  right: 0;
+  width: 801px;
+  border-top: 3px solid #908563;
+}
+
+.left-side-divider {
+  position: absolute;
+  height: 400px;
+  width: 1px;
+  left: -1px;
+  top:43px;
+  border-left: 3px solid #908563;
+}
+
+.budget-button-color {
+  background-color: #403B2C;
+  color: white;
+}
+
+.savings-button-color {
+  background-color: #403B2C;
+  color: white;
+}
+
+.savings-buttons {
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  bottom: 50px;
+}
+
+.home-tab {
+  background-color: #F20505;
+}
+
+.budget-tab {
+  background-color: #F28805;
+}
+
+.savings-tab {
+  background-color: #F2E105;
+}
+
+.aboutus-tab {
+  background-color: #50F205;
+}
+
+.resources-tab {
+  background-color: #7C05F2;
+}
+
+.tools {
+  position: relative;
+  z-index: 50;
+  width: 1000px;
+}
+
+.cannoli {
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.cannoli .stefanie, .cannoli .vic {
+  padding-right: 10px;
+}
+
+.cannoli .jeff, .cannoli .dan {
+  padding-left: 10px;
+}
+
+.post-it {
+  position: relative;
+  left: 550px;
+  top: 30px;
+}
+
+.folder-line {
+  position: absolute;
+  display: inline;
+  left: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.fixlist {
+  display: block;
+  width: 1000px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 50px;
+}
+
+.pie-legend {
+  list-style: none;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.percentage-savings {
+  margin-top: 10px;
+}
+
+.percentage-savings-form {
+  margin-right: 10px;
+}
+
+.percentage-savings-form, .percentage-savings-button {
+  position: relative;
+  bottom: 20px;
+}
+
+.fixlist li {
+  display: inline;
+}
+
+.fixlist img {
+  border: 1px solid black;
+  height: 75px;
+  opacity: 0.8;
+  margin: 10px 70px 10px 70px;
+}
+
+.fixlist img:hover {
+  opacity: 1;
+}
+
+.income-input input {
+  margin-bottom: 50px;
+}
+
+.cannoli img {
+  height: 150px;
+  float: left;
+}
+
+.cannoli img:hover {
+  transform: scale(1.3);
+}
+
+.cannoli article {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 20px;
+  height: 130px;
+  border: 1px solid black;
+}
+
+.cannoli .jeff img, .cannoli .dan img {
+  float: right;
+}
+
+.cannoli p {
+  width: 230px;
+  height: 200px;
+  margin-left: 5px;
+  font-size: 1em;
+  display: inline;
+}
+
+.cannoli .stefanie p {
+  position: relative;
+  top: 25px;
+}
+
+.cannoli .jeff p {
+  position: relative;
+  top: 30px;
+}
+
+.cannoli .vic p {
+  position: relative;
+  top: 25px;
+}
+
+.cannoli .dan p {
+  position: relative;
+  top: 15px;
+}
+
+.pie-legend span {
+  text-align: center;
+  height: 20px;
+  width: 200px;
+  display: inline-block;
+  border: 1px solid black;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow:
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000,
+    1px 1px 3px #000;
+}
+
+.current {
+  background-color: #FFEBAF;
+  color: #000;
+  text-shadow: none;
+  border-bottom: 3px solid #FFEBAF;
+  position: relative;
+  z-index: 50;
+}
+
+.home-tab.current {
+    border-bottom: none;
+    text-shadow: none;
+    z-index: -10;
+}
+
+
+.current:hover {
+  text-shadow: none;
+}
+
+.add {
+flex-basis: 100%;
+}
+
+#budget-form {
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ text-align: center;
+}
+
+#budget-to-savings-button {
+text-align: center;
+}
+
+#savings-plan-button {
+  background-color: #403B2C;
+  border-radius: 15px;
+  color: white;
+}
+
+#canvas-section {
+  display: inline-block;;
+  margin-top: 20px;
+
+}
+
+#chart-legend-location {
+  position: relative;
+  display: inline-block;
+  margin-left: 50px;
+  margin-bottom: 20px;
+  bottom: 110px;
+
+}
+
+#progress-holder {
+  width:400px;
+  height:20px;
+  background:grey;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#progress {
+  width:0;
+  height:100%;
+  background:black;
+  -webkit-transition:width 500ms;
+  position: relative;
+  bottom: 0;
+  right: 40px;
+}
+
+#savings-income-event-section {
+  text-align:center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#newGoal {
+  display: inline;
+  text-align: center;
+  margin: auto;
+}
+
+#budget-form {
+  background-color: rgba(118, 108, 78, .5);
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+#savingsForm {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  width: 900px;
+  padding-top: 10px;
+  bottom: 50px;
+  margin: auto;
+  background-color: rgba(118, 108, 78, .5);
+  border: 1px solid #999;
+  border: inset 1px solid #333;
+  border-radius: 15px;
+}
+
+#savingsData {
+  margin-top: 20px;
+}
+
+#canvas-section {
+  position: relative;
+  margin-left: 125px;
+}
