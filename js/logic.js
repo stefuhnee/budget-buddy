@@ -153,50 +153,50 @@ function collectSavingsData(event){
   };
 }
 
-// Event handler, on button click displays remaining income and asks if they'd like to save a percentage. Appends form and fieldset.
-function displayRemainingIncome(event) {
-  event.preventDefault();
-  if (document.getElementsByTagName('h2')[0]) {
-    savingsHeadingSection.innerHTML = '';
-  }
-  console.log('incomeRemaining' + incomeRemaining);
-  incomeRemainingHeading = document.createElement('h2');
-  incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
-  incomeRemainingHeading.textContent = 'You have $' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
-  savingsHeadingSection.appendChild(incomeRemainingHeading);
-  percentageSavingsForm = document.createElement('form');
-  percentageSavingsLabel = document.createElement('label');
-  percentageSavingsLabel.setAttribute('name', 'userPercentage');
-  percentageSavingsLabel.setAttribute('class', 'percentage-savings');
-  percentageSavingsLabel.textContent = 'Enter a Percentage to Save:';
-  percentageSavingsInput = document.createElement('input');
-  percentageSavingsInput.setAttribute('type', 'text');
-  percentageSavingsInput.setAttribute('name', 'userPercentage');
-  percentageSavingsInput.setAttribute('class', 'percentage-savings-form');
-  percentageSavingsButton = document.createElement('button');
-  percentageSavingsButton.setAttribute('type', 'submit');
-  percentageSavingsButton.setAttribute('class', 'savings-button-color');
-  percentageSavingsButton.setAttribute('class', 'percentage-savings-button');
-  percentageSavingsButton.textContent = 'Save Amount';
-  if (document.getElementsByClassName('percentage-savings-form')[0]) {
-    percentageHeadingsSection.innerHTML = '';
-    savingsIncomeEventSection.appendChild(percentageSavingsForm);
-    percentageSavingsForm.appendChild(percentageSavingsLabel);
-    percentageSavingsForm.appendChild(percentageSavingsInput);
-    percentageSavingsForm.appendChild(percentageSavingsButton);
-    percentageSavingsForm.addEventListener('submit', collectPercentageData);
-  } else {
-    savingsIncomeEventSection.appendChild(percentageSavingsForm);
-    percentageSavingsForm.appendChild(percentageSavingsLabel);
-    percentageSavingsForm.appendChild(percentageSavingsInput);
-    percentageSavingsForm.appendChild(percentageSavingsButton);
-    percentageSavingsForm.addEventListener('submit', collectPercentageData);
-  };
+// // Event handler, on button click displays remaining income and asks if they'd like to save a percentage. Appends form and fieldset.
+// function displayRemainingIncome(event) {
+//   event.preventDefault();
+//   if (document.getElementsByTagName('h2')[0]) {
+//     savingsHeadingSection.innerHTML = '';
+//   }
+//   console.log('incomeRemaining' + incomeRemaining);
+//   incomeRemainingHeading = document.createElement('h2');
+//   incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
+//   incomeRemainingHeading.textContent = 'You have $' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
+//   savingsHeadingSection.appendChild(incomeRemainingHeading);
+//   percentageSavingsForm = document.createElement('form');
+//   percentageSavingsLabel = document.createElement('label');
+//   percentageSavingsLabel.setAttribute('name', 'userPercentage');
+//   percentageSavingsLabel.setAttribute('class', 'percentage-savings');
+//   percentageSavingsLabel.textContent = 'Enter a Percentage to Save:';
+//   percentageSavingsInput = document.createElement('input');
+//   percentageSavingsInput.setAttribute('type', 'text');
+//   percentageSavingsInput.setAttribute('name', 'userPercentage');
+//   percentageSavingsInput.setAttribute('class', 'percentage-savings-form');
+//   percentageSavingsButton = document.createElement('button');
+//   percentageSavingsButton.setAttribute('type', 'submit');
+//   percentageSavingsButton.setAttribute('class', 'savings-button-color');
+//   percentageSavingsButton.setAttribute('class', 'percentage-savings-button');
+//   percentageSavingsButton.textContent = 'Save Amount';
+//   if (document.getElementsByClassName('percentage-savings-form')[0]) {
+//     percentageHeadingsSection.innerHTML = '';
+//     savingsIncomeEventSection.appendChild(percentageSavingsForm);
+//     percentageSavingsForm.appendChild(percentageSavingsLabel);
+//     percentageSavingsForm.appendChild(percentageSavingsInput);
+//     percentageSavingsForm.appendChild(percentageSavingsButton);
+//     percentageSavingsForm.addEventListener('submit', collectPercentageData);
+//   } else {
+//     savingsIncomeEventSection.appendChild(percentageSavingsForm);
+//     percentageSavingsForm.appendChild(percentageSavingsLabel);
+//     percentageSavingsForm.appendChild(percentageSavingsInput);
+//     percentageSavingsForm.appendChild(percentageSavingsButton);
+//     percentageSavingsForm.addEventListener('submit', collectPercentageData);
+//   };
+//
+// }
 
-}
-
-function collectPercentageData(event) {
-  event.preventDefault();
+function collectPercentageData(e) {
+  e.preventDefault();
   userPercentageValue = parseInt(event.target.userPercentage.value);
   userPercentageValue /= 100;
   console.log('User percentage value inputted ' + userPercentageValue);

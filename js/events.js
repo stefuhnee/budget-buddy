@@ -84,8 +84,42 @@ $('#budget-form').on('submit', function(event) {
   document.getElementById$('#chart-legend-location').innerHTML = myPieChart.generateLegend();
 });
 
-if (document.getElementById('savings-income-event-section')) {
-  savingsIncomeEvent.addEventListener('click', displayRemainingIncome);
+//////******/////
+
+if ($('#savings-income-event-section')) {
+  $('#savings-income-event').on('click', function(e) {
+    e.preventDefault();
+    if ($('h2')) {
+      $('#savings-heading-section').empty();
+    }
+    incomeRemainingHeading = document.createElement('h2');
+    incomeRemaining = JSON.parse(localStorage.getItem('Monthly Income Remaining'));
+    incomeRemainingHeading.textContent = 'You have $' + incomeRemaining + ' remaining in your budget. What percentage would like you to set aside for your savings goal?';
+    $('#savings-heading-section').append(incomeRemainingHeading);
+
+    var $percentForm = $('<form>');
+    var $percentLabel = $('<label>');
+    var $percentInput = $('<input>');
+    var $savingsButton = $('<button>');
+
+    $percentLabel.attr({name: 'userPercentage', class: 'percentage-savings'})
+      .text('Enter a Percentage to Save:');
+
+    $percentInput.attr({type: 'text', name: 'userPercentage', class: 'percentage-savings-form'});
+
+    $savingsButton.attr({type: 'submit', class: 'savings-button-color', class: 'percentage-savings-button'})
+      .text('Save Amount');
+
+    if ($('.percentage-savings-form')) {
+      $('#savings-income-event-section').append($percentForm);
+      $percentForm.append($percentLabel)
+      .append($percentInput)
+      .append($savingsButton);
+
+      collectPercentageData(e);
+    }
+  });
+
   clearButton.addEventListener('click', clearLocalStorage);
   savingsForm.addEventListener('submit', collectSavingsData);
 }
