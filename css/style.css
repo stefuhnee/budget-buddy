@@ -365,7 +365,7 @@ main > section {
   z-index: 50;
 }
 
-.home-tab.current {
+.home2.current {
     border-bottom: none;
     text-shadow: none;
     z-index: -10;
