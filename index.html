@@ -7,17 +7,18 @@
     <link href="css/normalize.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans|Ubuntu|Quicksand' rel='stylesheet' type='text/css'>
+    <script src="js/chart.js"></script> <!--budget page-->
   </head>
   <body>
     <header>
       <h1 class="title"/>budget buddy</h1>
-      <nav>
+      <nav class = "main-nav">
         <ul>
-          <a href= "index.html"><li class="current home-tab">HOME</li></a>
-          <a href= "budget.html"><li class="budget-tab">MY BUDGET</li></a>
-          <a href= "savings.html"><li class="savings-tab">SAVINGS</li></a>
-          <a href= "cannoli.html"><li class="aboutus-tab">ABOUT US</li></a>
-          <a href= "resources.html"><li class="resources-tab">RESOURCES</li></a>
+          <a href="#" ><li class=" current home-tab" data-tab="home">HOME</li></a>
+          <a href="#" ><li class="budget-tab" data-tab="mybudget">MY BUDGET</li></a>
+          <a href="#" ><li class="savings-tab" data-tab="savings">SAVINGS</li></a>
+          <a href="#" ><li class="aboutus-tab" data-tab="aboutus">ABOUT US</li></a>
+          <a href="#" ><li class="resources-tab" data-tab="resources">RESOURCES</li></a>
         </ul>
       </nav>
     </header>
@@ -29,6 +30,137 @@
         <img src="img/postit.png" class="animated hinge"/>
       </article>
     </main>
+
+    <div id = "mybudget" class ="not-index-main">
+        <section>
+        <form id="budget-form">
+
+          <article class="income-input">
+            <label name="enterIncome">Available Income</label>
+            <input type="number" name="enterIncome" class="insert" id="income" required placeholder="Enter 0 or a number">
+          </article>
+            <article>
+              <label name="rentMortgage">Rent/Mortgage</label>
+              <input type="number" name="rentMortgage" class="insert" id="rent" required placeholder="Enter 0 or a number">
+            </article>
+
+            <article>
+              <label name="foodGroceries">Food/Groceries</label>
+              <input type="number" name="foodGroceries" class="insert" id="food" required placeholder="Enter 0 or a number">
+            </article>
+
+            <article>
+              <label name="insurance">Insurance</label>
+              <input type="number" name="insurance" class="insert" id="insure" required placeholder="Enter 0 or a number">
+            </article>
+
+            <article>
+              <label name="utilities">Utilities</label>
+              <input type="number" name="utilities" class="insert" id="util" required placeholder="Enter 0 or a number">
+            </article>
+
+            <article>
+              <label name="loansCcDebt">Loans/Credit Cards/Debt</label>
+              <input type="number" name="loansCcDebt" class="insert" id="loan" required placeholder="Enter 0 or a number">
+            </article>
+
+            <article>
+              <label name="transportation">Transportation</label>
+              <input type="number" name="transportation" class="insert" id="tran" required placeholder="Enter 0 or a number">
+            </article>
+
+            <button type="submit" id="submit" class="budget-button-color">Pie Chart</button>
+        </form>
+        <section>
+          <section id="canvas-section">
+          </section>
+          <section id="chart-legend-location">
+          </section>
+        </section>
+        <section id="budget-to-savings-button">
+          <input id="savings-plan-button" type="button" onclick="location.href='savings.html'" value="Move on to your Savings Plan">
+
+        </section>
+      </section>
+    </div>
+
+    <div id="savings" class ="not-index-main">
+      <section class="cannoli">
+        <article class="stefanie">
+          <img src="img/stefcannoli.png"/>
+          <p>Stefanie hails from Arlington, WA, a town know for cows, a small airport, and meth.  She studied Psychology at the University of Washington, and yes, she can, in fact, read your mind. She is learning coding to become a magical ninja-unicorn hacker and eventually rule supreme. All your bases are belong to her. She likes to climb rocks for no good reason, explore forested areas, make things grow and then eat them, and travel to parts unknown.</p>
+          </article>
+        <article class="jeff">
+          <img src="img/jeffcannoli.png"/>
+          <p>Jeff Russell was born a long time ago before Seahawks, Mariners, Sounders, Thunderbirds, Storm, and even Sonics. He is a University of Washington graduate in Philosophy; Jeff has three adult daughters, two Huskies and a Golden Bear.  He isa karaoke, wake skating, Scandinavian crime fiction reading fiend who seeks world peace through coding.</p>
+        </article>
+        <article class="vic">
+          <img src="img/viccannoli.png" />
+          <p>They call him Victor Benavente. He is from Asheville, North Carolina, but now he lives in Tacoma, Washington. He got into coding because he loves cannolis and there is a cannoli place close to Code Fellows. His interests include hanging with his coding crew, being gangsta in Hilltop, and shredding mad hacks. His goal is to have more instagram followers than Taylor Swift. Follow him at vbenawesome!</p>
+        </article>
+        <article class="dan">
+        <img src="img/dannycannoli.png" />
+          <p>Dan is born and raised in the Pacific Northwest. After graduating from Washington State University in 2004 Dan moved to Seattle with his wife Ashley. They now have a Son named Henry and have lived in the Ballard/Phinney area for the past 5 years. Dan loves all Seattle sports. If Dan is not coding, you can find him attending a Sounders match or tailgating before a Seahawks game. Dan plans on increasing his coding skills at Code Fellows before embarking on a new adventure in the professional field. </p>
+        </article>
+      </section>
+    </div>
+
+    <div id ="resources" class ="not-index-main">
+      <section class="tools">
+        <ul class="fixlist">
+          <li><a href="http://www.consumercredit.com/media/11391/budget_in_your_pocket_2013.pdf" target="_blank"><img src="img/pocketbudget.png" alt="Pocket Budget" class="grow"></a></li>
+          <li><a href="https://www.everydollar.com/" target="_blank"><img src="img/everydollar.png" alt="Dollar Budget" class="grow"></a></li>
+          <li><a href="http://a248.e.akamai.net/f/1611/26335/9h/dramsey.download.akamai.com/23572/daveramsey.com/media/pdf/forms/fpu_qbudget.pdf" target="_blank"><img src="img/quickstartbudget.png" alt="Quick Start Budget" class="grow"></a></li>
+          <li><a href="https://www.consumer.gov/content/make-budget-worksheet"target="_blank"><img src="img/consumergov.png" alt="Consumer Worksheet" class="grow"></a></li>
+          <li><a href="http://www.moneytalksnews.com/free-budget-spreadsheets/" target="_blank"><img src="img/moneytalks.png" alt="Money Talks" class="grow"></a></li>
+          <li><a href="http://hackingyourbudget.com/budget-worksheet-templates/" target="_blank"><img src="img/hackingbudget.png" alt="Hacking Your Budget" class="grow"></a></li>
+          <li><a href="http://www.thesimpledollar.com/a-deeper-look-at-proportional-budgeting/" target="_blank"><img src="img/simpledollar.png" alt="Proportional Budgeting" class="grow"></a></li>
+          <li><a href="https://www.sportsinsights.com/blog/sports-betting-101-everything-need-get-started/" target="_blank"><img src="img/sportsinsights.png" alt="Sports Betting 101" class="grow"></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div id = "savings" class ="not-index-main">
+      <section id="savings-income-event-section">
+        <button id="savings-income-event" class="savings-button-color">Save some of your remaining budget money!</button>
+        <section id="savings-heading-section">
+        </section>
+      </section>
+
+      <form method="get" id="savingsForm">
+
+        <article>
+          <label name="savingsFor">What are you saving for?</label>
+          <input type="text" name="savingsFor" class="insert" id="saving">
+        </article>
+
+        <article>
+          <label name="howMuch">How much do you need to save?</label>
+          <input type="number" name="howMuch" class="insert" id="need" required placeholder="Enter a number">
+        </article>
+
+        <article class="add">
+          <label name="addMoney">Add money to savings</label>
+          <input type="number" name="addMoney" class="insert" id="addMoney" required placeholder="Enter a number">
+        </article>
+
+        <section id="newGoal">
+
+        </section>
+      </form>
+      <article class="savings-buttons">
+        <button type="submit" form="savingsForm"id="submit" class="savings-button-color"value="submit">Savings Progress</button>
+        <button id="clear" class="savings-button-color">Start A New Goal</button>
+        <article id="savingsData"></article>
+        <article id="progress-holder">
+          <figure id="progress">
+          </figure>
+        </article>
+      </article>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/data.js"></script>
     <script src="js/logic.js"></script>
     <script src="js/events.js"></script>
